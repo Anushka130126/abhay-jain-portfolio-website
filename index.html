@@ -118,10 +118,24 @@
         <p class="text-xl font-light text-neutral-700 leading-relaxed">
           Open to precise conversations regarding advisory positions, semiconductor ecosystem strategies, or institutional alignment.
         </p>
-        <div class="pt-6 flex items-center gap-8 text-lg font-semibold">
-          <a href="mailto:contact@abhayjain.net" class="text-black underline underline-offset-8 hover:text-neutral-500 transition-colors">Direct Email</a>
+        
+        <div class="pt-6 flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-8 text-lg font-semibold">
+          
+          <!-- Email Link + Copy Button Group -->
+          <div class="flex items-center gap-4">
+            <a href="mailto:contact@abhayjain.net" class="text-black underline underline-offset-8 hover:text-neutral-500 transition-colors">contact@abhayjain.net</a>
+            
+            <!-- Inline JavaScript to copy to clipboard and temporarily change button text -->
+            <button 
+              onclick="navigator.clipboard.writeText('contact@abhayjain.net'); this.innerText='COPIED'; setTimeout(() => this.innerText='COPY', 2000);" 
+              class="text-[10px] font-bold uppercase tracking-widest text-neutral-500 hover:text-black transition-colors border border-neutral-200 px-3 py-1.5 rounded-full cursor-pointer">
+              Copy
+            </button>
+          </div>
+
           <a href="https://www.linkedin.com/in/abhay-jain-10" target="_blank" rel="noopener noreferrer" class="text-black underline underline-offset-8 hover:text-neutral-500 transition-colors">LinkedIn Profile</a>
         </div>
+
       </div>
     </section>
 
