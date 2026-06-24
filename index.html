@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth text-[#111111]">
+<html lang="en" class="scroll-smooth bg-[#F7F7F5] text-stone-900">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abhay Jain — Executive Positioning</title>
   <meta name="description" content="Business Division Leader at Renesas Electronics. Bridging technology, localized product strategy, and cross-functional operations.">
   
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22 font-family=%22serif%22 font-weight=%22bold%22 fill=%22%23111111%22>AJ</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22 font-family=%22serif%22 font-weight=%22bold%22 fill=%22%231c1917%22>AJ</text></svg>">
   <script src="https://cdn.tailwindcss.com"></script>
   
   <style>
@@ -14,36 +14,43 @@
     body { font-family: 'Inter', sans-serif; }
     .font-serif { font-family: 'Forum', serif; }
 
-    /* Custom Entrance Animation */
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    /* Fine-grain noise texture for a premium, printed-paper feel */
+    .bg-noise {
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
     }
-    .animate-fade-in {
-      animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+    /* Scroll Reveal Classes */
+    .reveal {
       opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .delay-100 { animation-delay: 100ms; }
-    .delay-200 { animation-delay: 200ms; }
-    .delay-300 { animation-delay: 300ms; }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .delay-100 { transition-delay: 100ms; }
+    .delay-200 { transition-delay: 200ms; }
   </style>
 </head>
-<body class="antialiased selection:bg-neutral-800 selection:text-white relative min-h-screen bg-transparent">
+<body class="antialiased selection:bg-stone-800 selection:text-stone-100 relative min-h-screen bg-transparent">
 
-  <!-- Cinematic Glassmorphism Background -->
-  <div class="fixed inset-0 z-[-1]">
-    <img src="Abhay Jain banner pic.jpg" class="w-full h-full object-cover opacity-40 grayscale" alt="">
-    <div class="absolute inset-0 bg-[#FAFAFA]/85 backdrop-blur-3xl"></div>
+  <!-- Fixed Image Background & Noise Overlay -->
+  <div class="fixed inset-0 z-[-1] bg-[#F7F7F5]">
+    <!-- Notice the %20 replacing spaces in the filename -->
+    <img src="Abhay%20Jain%20banner%20pic.jpg" class="w-full h-full object-cover opacity-[0.35] grayscale contrast-125" alt="">
+    <div class="absolute inset-0 bg-[#F7F7F5]/85 backdrop-blur-[40px]"></div>
+    <div class="absolute inset-0 bg-noise pointer-events-none"></div>
   </div>
 
   <!-- Header -->
-  <header class="sticky top-0 z-50 border-b border-white/40 bg-white/40 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.03)] transition-all duration-300">
+  <header class="sticky top-0 z-50 border-b border-stone-200/50 bg-[#F7F7F5]/70 backdrop-blur-xl shadow-[0_2px_20px_rgba(0,0,0,0.02)] transition-all duration-300">
     <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-      <a href="#" class="font-serif text-3xl tracking-wide text-black hover:opacity-70 transition-opacity">Abhay Jain</a>
-      <nav class="flex items-center gap-8 text-xs font-semibold tracking-widest uppercase text-neutral-500">
-        <a href="#focus" class="hover:text-black transition-colors">Focus</a>
-        <a href="#track-record" class="hover:text-black transition-colors">Track Record</a>
-        <a href="#contact" class="text-black hover:opacity-70 transition-opacity">Contact</a>
+      <a href="#" class="font-serif text-3xl tracking-wide text-stone-900 hover:opacity-70 transition-opacity">Abhay Jain</a>
+      <nav class="flex items-center gap-8 text-[11px] font-semibold tracking-[0.2em] uppercase text-stone-500">
+        <a href="#focus" class="hover:text-stone-900 transition-colors">Focus</a>
+        <a href="#track-record" class="hover:text-stone-900 transition-colors">Track Record</a>
+        <a href="#contact" class="text-stone-900 hover:opacity-70 transition-opacity">Contact</a>
       </nav>
     </div>
   </header>
@@ -51,95 +58,91 @@
   <main class="mx-auto max-w-6xl px-6 py-16 md:py-32 space-y-32">
 
     <!-- Section 1: Hero -->
-    <section class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center animate-fade-in">
+    <section class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center reveal active">
       <div class="md:col-span-8 space-y-8">
-        <h1 class="font-serif text-6xl md:text-8xl tracking-wide text-black leading-none">
+        <h1 class="font-serif text-6xl md:text-8xl tracking-wide text-stone-900 leading-none">
           Abhay Jain
         </h1>
-        <p class="text-2xl md:text-3xl font-light text-neutral-700 max-w-3xl leading-snug">
+        <p class="text-2xl md:text-3xl font-light text-stone-600 max-w-3xl leading-snug">
           Business Division Leader at Renesas Electronics. Bridging technology, localized product strategy, and cross-functional operations.
         </p>
       </div>
-      <!-- Headshot with subtle hover effect -->
+      <!-- Headshot -->
       <div class="md:col-span-4 flex justify-start md:justify-end">
-        <div class="relative group cursor-pointer">
-          <div class="absolute inset-0 bg-black/5 rounded-sm blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-          <img src="Abhay Jain profile pic.jpg" alt="Abhay Jain" class="relative w-56 h-56 md:w-72 md:h-72 object-cover grayscale shadow-xl border border-white/60 rounded-sm group-hover:-translate-y-2 transition-transform duration-500 ease-out">
+        <div class="relative group cursor-pointer reveal active delay-100">
+          <div class="absolute inset-0 bg-stone-900/5 rounded-sm blur-xl group-hover:blur-2xl transition-all duration-700"></div>
+          <img src="Abhay%20Jain%20profile%20pic.jpg" alt="Abhay Jain" class="relative w-56 h-56 md:w-72 md:h-72 object-cover grayscale sepia-[.1] shadow-2xl border border-white/60 rounded-sm group-hover:-translate-y-2 transition-transform duration-700 ease-out">
         </div>
       </div>
     </section>
 
     <!-- Section 2: Current Focus Area -->
-    <section id="focus" class="grid grid-cols-1 md:grid-cols-12 gap-12 border-t border-neutral-300/50 pt-16 animate-fade-in delay-100">
+    <section id="focus" class="grid grid-cols-1 md:grid-cols-12 gap-12 border-t border-stone-300/50 pt-16 reveal">
       <div class="md:col-span-4">
-        <h2 class="font-serif text-3xl tracking-wide text-neutral-900">Current Focus</h2>
+        <h2 class="font-serif text-3xl tracking-wide text-stone-900">Current Focus</h2>
       </div>
       <div class="md:col-span-8">
-        <ul class="space-y-8 text-xl text-neutral-700 font-light leading-relaxed">
-          <li class="relative pl-8 before:content-['—'] before:absolute before:left-0 before:text-black before:font-medium hover:text-black transition-colors duration-300">
+        <ul class="space-y-8 text-xl text-stone-600 font-light leading-relaxed">
+          <li class="relative pl-8 before:content-['—'] before:absolute before:left-0 before:text-stone-400 before:font-medium hover:text-stone-900 transition-colors duration-500">
             Leading Renesas’ India-for-India business unit, managing power management, sensing, and embedded analog semiconductor portfolios.
           </li>
-          <li class="relative pl-8 before:content-['—'] before:absolute before:left-0 before:text-black before:font-medium hover:text-black transition-colors duration-300">
+          <li class="relative pl-8 before:content-['—'] before:absolute before:left-0 before:text-stone-400 before:font-medium hover:text-stone-900 transition-colors duration-500">
             Shaping localized product roadmaps and accelerating market adoption across automotive, industrial, and energy segments.
           </li>
-          <li class="relative pl-8 before:content-['—'] before:absolute before:left-0 before:text-black before:font-medium hover:text-black transition-colors duration-300">
+          <li class="relative pl-8 before:content-['—'] before:absolute before:left-0 before:text-stone-400 before:font-medium hover:text-stone-900 transition-colors duration-500">
             Developing critical ecosystem partnerships to support sustainable scaling within India's rapidly evolving electronics hardware economy.
           </li>
         </ul>
       </div>
     </section>
 
-    <!-- Section 3: Track Record (With Glassmorphism Hover Cards) -->
-    <section id="track-record" class="grid grid-cols-1 md:grid-cols-12 gap-12 border-t border-neutral-300/50 pt-16 animate-fade-in delay-200">
+    <!-- Section 3: Track Record -->
+    <section id="track-record" class="grid grid-cols-1 md:grid-cols-12 gap-12 border-t border-stone-300/50 pt-16 reveal">
       <div class="md:col-span-4">
-        <h2 class="font-serif text-3xl tracking-wide text-neutral-900">Track Record</h2>
+        <h2 class="font-serif text-3xl tracking-wide text-stone-900">Track Record</h2>
       </div>
       <div class="md:col-span-8 space-y-16">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-16">
           
-          <!-- Stat Card 1 -->
-          <div class="group p-6 -m-6 rounded-2xl hover:bg-white/40 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-transparent hover:border-white/60 transition-all duration-300 hover:-translate-y-1 cursor-default">
-            <div class="font-serif text-5xl tracking-wide text-black transition-transform duration-300 group-hover:scale-105 origin-left">$3B – $30B</div>
-            <div class="text-xs uppercase tracking-widest text-neutral-500 font-semibold mt-3">Portfolio Management</div>
-            <p class="text-lg text-neutral-700 font-light pt-2">Executed go-to-market strategies, sales playbooks, and KPI architectures across global business structures.</p>
+          <div class="group p-6 -m-6 rounded-2xl hover:bg-white/40 hover:shadow-[0_8px_30px_rgb(0,0,0,0.03)] border border-transparent hover:border-white/60 transition-all duration-500 hover:-translate-y-1 cursor-default reveal">
+            <div class="font-serif text-5xl tracking-wide text-stone-900 transition-transform duration-500 group-hover:scale-105 origin-left">$3B – $30B</div>
+            <div class="text-[10px] uppercase tracking-[0.2em] text-stone-500 font-bold mt-4">Portfolio Management</div>
+            <p class="text-lg text-stone-600 font-light pt-2">Executed go-to-market strategies, sales playbooks, and KPI architectures across global business structures.</p>
           </div>
           
-          <!-- Stat Card 2 -->
-          <div class="group p-6 -m-6 rounded-2xl hover:bg-white/40 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-transparent hover:border-white/60 transition-all duration-300 hover:-translate-y-1 cursor-default">
-            <div class="font-serif text-5xl tracking-wide text-black transition-transform duration-300 group-hover:scale-105 origin-left">+15% to 20%</div>
-            <div class="text-xs uppercase tracking-widest text-neutral-500 font-semibold mt-3">Operational Efficiency</div>
-            <p class="text-lg text-neutral-700 font-light pt-2">Built central program networks governing resource deployment, outsourcing, and analytics automation.</p>
+          <div class="group p-6 -m-6 rounded-2xl hover:bg-white/40 hover:shadow-[0_8px_30px_rgb(0,0,0,0.03)] border border-transparent hover:border-white/60 transition-all duration-500 hover:-translate-y-1 cursor-default reveal delay-100">
+            <div class="font-serif text-5xl tracking-wide text-stone-900 transition-transform duration-500 group-hover:scale-105 origin-left">+15% to 20%</div>
+            <div class="text-[10px] uppercase tracking-[0.2em] text-stone-500 font-bold mt-4">Operational Efficiency</div>
+            <p class="text-lg text-stone-600 font-light pt-2">Built central program networks governing resource deployment, outsourcing, and analytics automation.</p>
           </div>
           
-          <!-- Stat Card 3 -->
-          <div class="group p-6 -m-6 rounded-2xl hover:bg-white/40 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-transparent hover:border-white/60 transition-all duration-300 hover:-translate-y-1 cursor-default">
-            <div class="font-serif text-5xl tracking-wide text-black transition-transform duration-300 group-hover:scale-105 origin-left">~10% Growth</div>
-            <div class="text-xs uppercase tracking-widest text-neutral-500 font-semibold mt-3">Org Transformation</div>
-            <p class="text-lg text-neutral-700 font-light pt-2">Led post-merger integration strategies and commercial growth pilots during tenure at McKinsey & Company.</p>
+          <div class="group p-6 -m-6 rounded-2xl hover:bg-white/40 hover:shadow-[0_8px_30px_rgb(0,0,0,0.03)] border border-transparent hover:border-white/60 transition-all duration-500 hover:-translate-y-1 cursor-default reveal">
+            <div class="font-serif text-5xl tracking-wide text-stone-900 transition-transform duration-500 group-hover:scale-105 origin-left">~10% Growth</div>
+            <div class="text-[10px] uppercase tracking-[0.2em] text-stone-500 font-bold mt-4">Org Transformation</div>
+            <p class="text-lg text-stone-600 font-light pt-2">Led post-merger integration strategies and commercial growth pilots during tenure at McKinsey & Company.</p>
           </div>
           
-          <!-- Stat Card 4 -->
-          <div class="group p-6 -m-6 rounded-2xl hover:bg-white/40 hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-transparent hover:border-white/60 transition-all duration-300 hover:-translate-y-1 cursor-default">
-            <div class="font-serif text-5xl tracking-wide text-black transition-transform duration-300 group-hover:scale-105 origin-left">Patented</div>
-            <div class="text-xs uppercase tracking-widest text-neutral-500 font-semibold mt-3">Deep-Tech Hardware</div>
-            <p class="text-lg text-neutral-700 font-light pt-2">Co-authored emergency utility safety mechanics and published global industrial research at Mitsubishi Heavy Industries.</p>
+          <div class="group p-6 -m-6 rounded-2xl hover:bg-white/40 hover:shadow-[0_8px_30px_rgb(0,0,0,0.03)] border border-transparent hover:border-white/60 transition-all duration-500 hover:-translate-y-1 cursor-default reveal delay-100">
+            <div class="font-serif text-5xl tracking-wide text-stone-900 transition-transform duration-500 group-hover:scale-105 origin-left">Patented</div>
+            <div class="text-[10px] uppercase tracking-[0.2em] text-stone-500 font-bold mt-4">Deep-Tech Hardware</div>
+            <p class="text-lg text-stone-600 font-light pt-2">Co-authored emergency utility safety mechanics and published global industrial research at Mitsubishi Heavy Industries.</p>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- Section 4: Secure Contact Surface (LinkedIn Only CTA) -->
-    <section id="contact" class="border-t border-neutral-300/50 pt-16 pb-24 animate-fade-in delay-300">
+    <!-- Section 4: Secure Contact Surface -->
+    <section id="contact" class="border-t border-stone-300/50 pt-16 pb-24 reveal">
       <div class="max-w-2xl space-y-8">
-        <h2 class="font-serif text-3xl tracking-wide text-neutral-900">Inbound</h2>
-        <p class="text-xl font-light text-neutral-700 leading-relaxed">
+        <h2 class="font-serif text-3xl tracking-wide text-stone-900">Inbound</h2>
+        <p class="text-xl font-light text-stone-600 leading-relaxed">
           Open to precise conversations regarding advisory positions, semiconductor ecosystem strategies, or institutional alignment.
         </p>
         
         <div class="pt-4">
-          <a href="https://www.linkedin.com/in/abhay-jain-10" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-8 py-4 bg-black text-white rounded-full hover:bg-neutral-800 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg active:scale-95 group">
-            <span class="text-sm font-semibold tracking-wider uppercase">Connect on LinkedIn</span>
+          <a href="https://www.linkedin.com/in/abhay-jain-10" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-4 px-8 py-4 bg-stone-900 text-stone-100 rounded-full hover:bg-stone-800 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl active:scale-95 group">
+            <span class="text-xs font-semibold tracking-widest uppercase">Connect on LinkedIn</span>
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
@@ -149,5 +152,27 @@
     </section>
 
   </main>
+
+  <!-- Vanilla JS for Scroll Reveal Observer -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const reveals = document.querySelectorAll(".reveal");
+      
+      const revealOnScroll = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+            observer.unobserve(entry.target); // Only reveal once
+          }
+        });
+      }, {
+        root: null,
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px"
+      });
+
+      reveals.forEach(reveal => revealOnScroll.observe(reveal));
+    });
+  </script>
 </body>
 </html>
