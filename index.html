@@ -10,21 +10,35 @@
   <script src="https://cdn.tailwindcss.com"></script>
   
   <style>
-    /* CSS (Cascading Style Sheets): The coding language used to style and format the visual layout of HTML documents. */
     @import url('https://fonts.googleapis.com/css2?family=Forum&family=Inter:wght@300;400;500;600&display=swap');
     body { font-family: 'Inter', sans-serif; }
     .font-serif { font-family: 'Forum', serif; }
 
-    /* Noise texture overlay for a premium matte finish */
-    .bg-noise {
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+    /* Flowing Liquid Gradient Animation for Text */
+    @keyframes gradient-shift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .animate-text-gradient {
+      background-size: 200% auto;
+      animation: gradient-shift 6s linear infinite;
     }
 
-    /* Enhanced Scroll Reveal Classes */
+    /* Slow breathing animation for background mesh orbs */
+    @keyframes breathe {
+      0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.5; }
+      50% { transform: scale(1.1) translate(2%, 2%); opacity: 0.8; }
+    }
+    .animate-breathe {
+      animation: breathe 12s ease-in-out infinite;
+    }
+
+    /* Scroll Reveal Classes */
     .reveal {
       opacity: 0;
-      transform: translateY(50px) scale(0.98);
-      transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+      transform: translateY(40px) scale(0.98);
+      transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .reveal.active {
       opacity: 1;
@@ -32,27 +46,29 @@
     }
     .delay-100 { transition-delay: 100ms; }
     .delay-200 { transition-delay: 200ms; }
-    .delay-300 { transition-delay: 300ms; }
   </style>
 </head>
 <body class="antialiased selection:bg-cyan-900 selection:text-cyan-50 relative min-h-screen">
 
-  <!-- Fixed Background: Radial Gradient + Banner Image + Heavy Frosted Glass -->
-  <div class="fixed inset-0 z-[-1] bg-gradient-to-br from-slate-950 via-slate-900 to-[#0a0f16]">
-    <!-- IMAGE 1 CHANGE HERE: Background Banner -->
-    <img src="Abhay_Jain_banner_pic.jpg" class="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-luminosity" alt="">
-    <div class="absolute inset-0 bg-slate-950/70 backdrop-blur-[60px]"></div>
-    <div class="absolute inset-0 bg-noise pointer-events-none"></div>
+  <!-- Dynamic Animated Background -->
+  <div class="fixed inset-0 z-[-1] overflow-hidden bg-slate-950">
+    <!-- Animated Aurora/Mesh Gradients -->
+    <div class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] rounded-full bg-cyan-900/40 blur-[120px] animate-breathe"></div>
+    <div class="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] rounded-full bg-blue-900/30 blur-[120px] animate-breathe" style="animation-delay: -6s;"></div>
+
+    <!-- The Banner Image: Now visible, lightly blended and frosted -->
+    <img src="Abhay_Jain_banner_pic.jpg" class="absolute inset-0 w-full h-full object-cover opacity-50 mix-blend-overlay" alt="">
+    <div class="absolute inset-0 bg-slate-950/60 backdrop-blur-2xl"></div>
   </div>
 
   <!-- Header -->
-  <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-900/40 backdrop-blur-2xl shadow-[0_4px_30px_rgba(0,0,0,0.3)] transition-all duration-300">
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-900/30 backdrop-blur-xl shadow-[0_4px_30px_rgba(0,0,0,0.3)] transition-all duration-300">
     <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-      <a href="#" class="font-serif text-3xl tracking-wide text-white hover:text-cyan-200 transition-colors">Abhay Jain</a>
-      <nav class="flex items-center gap-8 text-[11px] font-semibold tracking-[0.2em] uppercase text-slate-400">
-        <a href="#focus" class="hover:text-white transition-colors">Focus</a>
-        <a href="#track-record" class="hover:text-white transition-colors">Track Record</a>
-        <a href="#contact" class="text-white hover:text-cyan-200 transition-colors">Contact</a>
+      <a href="#" class="font-serif text-3xl tracking-wide text-white hover:text-cyan-400 transition-colors duration-300">Abhay Jain</a>
+      <nav class="flex items-center gap-8 text-[11px] font-semibold tracking-[0.2em] uppercase text-slate-300">
+        <a href="#focus" class="hover:text-cyan-400 transition-colors duration-300">Focus</a>
+        <a href="#track-record" class="hover:text-cyan-400 transition-colors duration-300">Track Record</a>
+        <a href="#contact" class="text-white hover:text-cyan-400 transition-colors duration-300">Contact</a>
       </nav>
     </div>
   </header>
@@ -62,19 +78,19 @@
     <!-- Section 1: Hero -->
     <section class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center reveal active">
       <div class="md:col-span-8 space-y-8">
-        <h1 class="font-serif text-6xl md:text-8xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-slate-500 leading-tight pb-2">
+        <!-- Animated Gradient Text -->
+        <h1 class="font-serif text-6xl md:text-8xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-200 to-blue-400 animate-text-gradient leading-tight pb-2">
           Abhay Jain
         </h1>
-        <p class="text-2xl md:text-3xl font-light text-slate-300 max-w-3xl leading-snug">
+        <p class="text-2xl md:text-3xl font-light text-slate-200 max-w-3xl leading-snug">
           Business Division Leader at Renesas Electronics. Bridging technology, localized product strategy, and cross-functional operations.
         </p>
       </div>
-      <!-- Headshot -->
+      <!-- Headshot: Full Color, No Grayscale -->
       <div class="md:col-span-4 flex justify-start md:justify-end">
         <div class="relative group cursor-pointer reveal active delay-200">
-          <div class="absolute inset-0 bg-cyan-500/20 rounded-sm blur-2xl group-hover:bg-cyan-400/30 transition-all duration-700"></div>
-          <!-- IMAGE 2 CHANGE HERE: Profile Picture -->
-          <img src="Abhay_Jain_profile_pic.jpg" alt="Abhay Jain" class="relative w-56 h-56 md:w-72 md:h-72 object-cover grayscale contrast-125 shadow-2xl border border-white/20 rounded-sm group-hover:-translate-y-2 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-cyan-500/30 rounded-lg blur-2xl group-hover:bg-cyan-400/50 transition-all duration-700"></div>
+          <img src="Abhay_Jain_profile_pic.jpg" alt="Abhay Jain" class="relative w-56 h-56 md:w-72 md:h-72 object-cover shadow-[0_0_40px_rgba(0,0,0,0.5)] border border-white/20 rounded-lg group-hover:-translate-y-3 group-hover:scale-[1.02] transition-all duration-700 ease-out">
         </div>
       </div>
     </section>
@@ -82,53 +98,57 @@
     <!-- Section 2: Current Focus Area -->
     <section id="focus" class="grid grid-cols-1 md:grid-cols-12 gap-12 border-t border-white/10 pt-16 reveal">
       <div class="md:col-span-4">
-        <h2 class="font-serif text-3xl tracking-wide text-white">Current Focus</h2>
+        <h2 class="font-serif text-4xl tracking-wide text-white">Current Focus</h2>
       </div>
       <div class="md:col-span-8">
         <ul class="space-y-8 text-xl text-slate-300 font-light leading-relaxed">
-          <li class="relative pl-8 before:content-['—'] before:absolute before:left-0 before:text-cyan-400 before:font-bold hover:text-white transition-colors duration-500">
+          <li class="relative pl-8 before:content-['—'] before:absolute before:left-0 before:text-cyan-400 before:font-bold hover:text-white transition-colors duration-500 hover:translate-x-2 transform">
             Leading Renesas’ India-for-India business unit, managing power management, sensing, and embedded analog semiconductor portfolios.
           </li>
-          <li class="relative pl-8 before:content-['—'] before:absolute before:left-0 before:text-cyan-400 before:font-bold hover:text-white transition-colors duration-500">
+          <li class="relative pl-8 before:content-['—'] before:absolute before:left-0 before:text-cyan-400 before:font-bold hover:text-white transition-colors duration-500 hover:translate-x-2 transform">
             Shaping localized product roadmaps and accelerating market adoption across automotive, industrial, and energy segments.
           </li>
-          <li class="relative pl-8 before:content-['—'] before:absolute before:left-0 before:text-cyan-400 before:font-bold hover:text-white transition-colors duration-500">
+          <li class="relative pl-8 before:content-['—'] before:absolute before:left-0 before:text-cyan-400 before:font-bold hover:text-white transition-colors duration-500 hover:translate-x-2 transform">
             Developing critical ecosystem partnerships to support sustainable scaling within India's rapidly evolving electronics hardware economy.
           </li>
         </ul>
       </div>
     </section>
 
-    <!-- Section 3: Track Record (Glassmorphism Cards) -->
+    <!-- Section 3: Track Record (Upgraded Frosted Glass Cards) -->
     <section id="track-record" class="grid grid-cols-1 md:grid-cols-12 gap-12 border-t border-white/10 pt-16 reveal">
       <div class="md:col-span-4">
-        <h2 class="font-serif text-3xl tracking-wide text-white">Track Record</h2>
+        <h2 class="font-serif text-4xl tracking-wide text-white">Track Record</h2>
       </div>
       <div class="md:col-span-8 space-y-16">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-12">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
           
-          <div class="group p-8 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 hover:border-cyan-500/50 transition-all duration-500 hover:-translate-y-2 shadow-xl cursor-default reveal">
-            <div class="font-serif text-5xl tracking-wide text-white transition-transform duration-500 group-hover:scale-105 origin-left">$3B – $30B</div>
+          <!-- Card 1 -->
+          <div class="group p-8 rounded-2xl bg-slate-800/30 backdrop-blur-xl border border-white/10 hover:bg-slate-800/50 hover:border-cyan-400/50 hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal">
+            <div class="font-serif text-5xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400 transition-transform duration-500 group-hover:scale-105 origin-left group-hover:animate-text-gradient group-hover:from-white group-hover:to-cyan-200">$3B – $30B</div>
             <div class="text-[10px] uppercase tracking-[0.2em] text-cyan-400 font-bold mt-4">Portfolio Management</div>
-            <p class="text-lg text-slate-400 font-light pt-3">Executed go-to-market strategies, sales playbooks, and KPI architectures across global business structures.</p>
+            <p class="text-lg text-slate-300 font-light pt-3">Executed go-to-market strategies, sales playbooks, and KPI architectures across global business structures.</p>
           </div>
           
-          <div class="group p-8 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 hover:border-cyan-500/50 transition-all duration-500 hover:-translate-y-2 shadow-xl cursor-default reveal delay-100">
-            <div class="font-serif text-5xl tracking-wide text-white transition-transform duration-500 group-hover:scale-105 origin-left">+15% to 20%</div>
+          <!-- Card 2 -->
+          <div class="group p-8 rounded-2xl bg-slate-800/30 backdrop-blur-xl border border-white/10 hover:bg-slate-800/50 hover:border-cyan-400/50 hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal delay-100">
+            <div class="font-serif text-5xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400 transition-transform duration-500 group-hover:scale-105 origin-left group-hover:animate-text-gradient group-hover:from-white group-hover:to-cyan-200">+15% to 20%</div>
             <div class="text-[10px] uppercase tracking-[0.2em] text-cyan-400 font-bold mt-4">Operational Efficiency</div>
-            <p class="text-lg text-slate-400 font-light pt-3">Built central program networks governing resource deployment, outsourcing, and analytics automation.</p>
+            <p class="text-lg text-slate-300 font-light pt-3">Built central program networks governing resource deployment, outsourcing, and analytics automation.</p>
           </div>
           
-          <div class="group p-8 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 hover:border-cyan-500/50 transition-all duration-500 hover:-translate-y-2 shadow-xl cursor-default reveal">
-            <div class="font-serif text-5xl tracking-wide text-white transition-transform duration-500 group-hover:scale-105 origin-left">~10% Growth</div>
+          <!-- Card 3 -->
+          <div class="group p-8 rounded-2xl bg-slate-800/30 backdrop-blur-xl border border-white/10 hover:bg-slate-800/50 hover:border-cyan-400/50 hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal">
+            <div class="font-serif text-5xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400 transition-transform duration-500 group-hover:scale-105 origin-left group-hover:animate-text-gradient group-hover:from-white group-hover:to-cyan-200">~10% Growth</div>
             <div class="text-[10px] uppercase tracking-[0.2em] text-cyan-400 font-bold mt-4">Org Transformation</div>
-            <p class="text-lg text-slate-400 font-light pt-3">Led post-merger integration strategies and commercial growth pilots during tenure at McKinsey & Company.</p>
+            <p class="text-lg text-slate-300 font-light pt-3">Led post-merger integration strategies and commercial growth pilots during tenure at McKinsey & Company.</p>
           </div>
           
-          <div class="group p-8 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 hover:border-cyan-500/50 transition-all duration-500 hover:-translate-y-2 shadow-xl cursor-default reveal delay-100">
-            <div class="font-serif text-5xl tracking-wide text-white transition-transform duration-500 group-hover:scale-105 origin-left">Patented</div>
+          <!-- Card 4 -->
+          <div class="group p-8 rounded-2xl bg-slate-800/30 backdrop-blur-xl border border-white/10 hover:bg-slate-800/50 hover:border-cyan-400/50 hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal delay-100">
+            <div class="font-serif text-5xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400 transition-transform duration-500 group-hover:scale-105 origin-left group-hover:animate-text-gradient group-hover:from-white group-hover:to-cyan-200">Patented</div>
             <div class="text-[10px] uppercase tracking-[0.2em] text-cyan-400 font-bold mt-4">Deep-Tech Hardware</div>
-            <p class="text-lg text-slate-400 font-light pt-3">Co-authored emergency utility safety mechanics and published global industrial research at Mitsubishi Heavy Industries.</p>
+            <p class="text-lg text-slate-300 font-light pt-3">Co-authored emergency utility safety mechanics and published global industrial research at Mitsubishi Heavy Industries.</p>
           </div>
 
         </div>
@@ -138,17 +158,22 @@
     <!-- Section 4: Secure Contact Surface -->
     <section id="contact" class="border-t border-white/10 pt-16 pb-24 reveal">
       <div class="max-w-2xl space-y-8">
-        <h2 class="font-serif text-3xl tracking-wide text-white">Inbound</h2>
+        <h2 class="font-serif text-4xl tracking-wide text-white">Inbound</h2>
         <p class="text-xl font-light text-slate-300 leading-relaxed">
           Open to precise conversations regarding advisory positions, semiconductor ecosystem strategies, or institutional alignment.
         </p>
         
         <div class="pt-6">
-          <a href="https://www.linkedin.com/in/abhay-jain-10" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-4 px-8 py-4 bg-white text-slate-950 rounded-full hover:bg-cyan-50 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(34,211,238,0.3)] active:scale-95 group">
-            <span class="text-xs font-bold tracking-widest uppercase">Connect on LinkedIn</span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
+          <!-- Animated glowing button -->
+          <a href="https://www.linkedin.com/in/abhay-jain-10" target="_blank" rel="noopener noreferrer" class="relative inline-flex items-center justify-center px-8 py-4 bg-transparent rounded-full group overflow-hidden">
+            <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-cyan-600 to-blue-600 opacity-80 group-hover:opacity-100 transition-opacity duration-300"></span>
+            <span class="absolute bottom-0 right-0 block w-64 h-64 mb-32 mr-4 transition duration-500 origin-bottom-left transform rotate-45 translate-x-24 bg-cyan-400 opacity-30 group-hover:rotate-90 ease"></span>
+            <span class="relative flex items-center gap-4 text-xs font-bold tracking-widest uppercase text-white">
+              Connect on LinkedIn
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transform transition-transform duration-300 group-hover:translate-x-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </span>
           </a>
         </div>
       </div>
@@ -156,7 +181,6 @@
 
   </main>
 
-  <!-- JS (JavaScript): A programming language used to create dynamic and interactive effects within web browsers; opposite: static HTML. -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const reveals = document.querySelectorAll(".reveal");
@@ -164,20 +188,18 @@
       const revealOnScroll = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            // DOM (Document Object Model): The structural representation of the HTML document that JavaScript interacts with to change styles or content dynamically.
             entry.target.classList.add("active");
             observer.unobserve(entry.target);
           }
         });
       }, {
         root: null,
-        threshold: 0.1, // Element reveals when 10% visible
+        threshold: 0.15,
         rootMargin: "0px 0px -50px 0px"
       });
 
       reveals.forEach(reveal => revealOnScroll.observe(reveal));
       
-      // Force reveal above-the-fold content immediately in case Observer delays
       setTimeout(() => {
         document.querySelectorAll('.reveal.active').forEach(el => el.style.opacity = "1");
       }, 100);
