@@ -14,7 +14,6 @@
     body { font-family: 'Inter', sans-serif; }
     .font-serif { font-family: 'Forum', serif; }
 
-    /* Flowing Liquid Gradient Animation for Text */
     @keyframes gradient-shift {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
@@ -25,7 +24,6 @@
       animation: gradient-shift 6s linear infinite;
     }
 
-    /* Slow breathing animation for background mesh orbs */
     @keyframes breathe {
       0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.5; }
       50% { transform: scale(1.1) translate(2%, 2%); opacity: 0.8; }
@@ -34,7 +32,6 @@
       animation: breathe 12s ease-in-out infinite;
     }
 
-    /* Scroll Reveal Classes */
     .reveal {
       opacity: 0;
       transform: translateY(40px) scale(0.98);
@@ -48,71 +45,63 @@
     .delay-200 { transition-delay: 200ms; }
   </style>
 </head>
-<body class="antialiased selection:bg-cyan-900 selection:text-cyan-50 relative min-h-screen">
+<body class="antialiased selection:bg-amber-900 selection:text-amber-50 relative min-h-screen">
 
-  <!-- Dynamic Animated Background -->
   <div class="fixed inset-0 z-[-1] overflow-hidden bg-slate-950">
-    <!-- Animated Aurora/Mesh Gradients -->
-    <div class="absolute top-[-10%] left-[-10%] w-[80%] lg:w-[60%] h-[60%] rounded-full bg-cyan-900/40 blur-[100px] lg:blur-[120px] animate-breathe"></div>
-    <div class="absolute bottom-[-10%] right-[-10%] w-[80%] lg:w-[60%] h-[60%] rounded-full bg-blue-900/30 blur-[100px] lg:blur-[120px] animate-breathe" style="animation-delay: -6s;"></div>
+    <div class="absolute top-[-10%] left-[-10%] w-[80%] lg:w-[60%] h-[60%] rounded-full bg-amber-900/40 blur-[100px] lg:blur-[120px] animate-breathe"></div>
+    <div class="absolute bottom-[-10%] right-[-10%] w-[80%] lg:w-[60%] h-[60%] rounded-full bg-yellow-800/30 blur-[100px] lg:blur-[120px] animate-breathe" style="animation-delay: -6s;"></div>
   </div>
 
-  <!-- Header -->
   <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-900/30 backdrop-blur-xl shadow-[0_4px_30px_rgba(0,0,0,0.3)] transition-all duration-300">
     <div class="mx-auto flex max-w-6xl items-center justify-between px-4 md:px-6 py-4 md:py-5">
-      <a href="#" class="font-serif text-2xl md:text-3xl tracking-wide text-white hover:text-cyan-400 transition-colors duration-300">Abhay Jain</a>
+      <a href="#" class="font-serif text-2xl md:text-3xl tracking-wide text-white hover:text-amber-400 transition-colors duration-300">Abhay Jain</a>
       <nav class="flex items-center gap-4 lg:gap-8 text-[10px] md:text-[11px] font-semibold tracking-[0.15em] lg:tracking-[0.2em] uppercase text-slate-300">
-        <a href="#focus" class="hover:text-cyan-400 transition-colors duration-300">Focus</a>
-        <a href="#track-record" class="hover:text-cyan-400 transition-colors duration-300 hidden sm:block">Track Record</a>
-        <a href="#contact" class="text-white hover:text-cyan-400 transition-colors duration-300">Contact</a>
+        <a href="#focus" class="hover:text-amber-400 transition-colors duration-300">Focus</a>
+        <a href="#track-record" class="hover:text-amber-400 transition-colors duration-300 hidden sm:block">Track Record</a>
+        <a href="#contact" class="text-white hover:text-amber-400 transition-colors duration-300">Contact</a>
       </nav>
     </div>
   </header>
 
   <main class="mx-auto max-w-6xl px-4 md:px-6 py-12 lg:py-32 space-y-24 lg:space-y-32">
 
-    <!-- Section 1: Hero -->
     <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center reveal active">
       <div class="lg:col-span-8 space-y-6 lg:space-y-8 order-2 lg:order-1 text-center lg:text-left">
-        <!-- Animated Gradient Text -->
-        <h1 class="font-serif text-5xl sm:text-6xl lg:text-8xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-200 to-blue-400 animate-text-gradient leading-tight pb-2">
+        <h1 class="font-serif text-5xl sm:text-6xl lg:text-8xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-white via-amber-200 to-yellow-500 animate-text-gradient leading-tight pb-2">
           Abhay Jain
         </h1>
         <p class="text-xl sm:text-2xl lg:text-3xl font-light text-slate-200 max-w-3xl leading-snug mx-auto lg:mx-0">
           Business Division Leader at Renesas Electronics. Bridging technology, localized product strategy, and cross-functional operations.
         </p>
       </div>
-      <!-- Headshot -->
       <div class="lg:col-span-4 flex justify-center lg:justify-end order-1 lg:order-2">
         <div class="relative group cursor-pointer reveal active delay-200">
-          <div class="absolute inset-0 bg-cyan-500/30 rounded-lg blur-2xl group-hover:bg-cyan-400/50 transition-all duration-700"></div>
+          <div class="absolute inset-0 bg-amber-500/30 rounded-lg blur-2xl group-hover:bg-amber-400/50 transition-all duration-700"></div>
           <img src="Abhay_Jain_profile_pic.jpg" alt="Abhay Jain" class="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-72 lg:h-72 object-cover shadow-[0_0_40px_rgba(0,0,0,0.5)] border border-white/20 rounded-lg group-hover:-translate-y-3 group-hover:scale-[1.02] transition-all duration-700 ease-out">
         </div>
       </div>
     </section>
 
-    <!-- Section 2: Current Focus Area -->
     <section id="focus" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 border-t border-white/10 pt-16 reveal">
       <div class="lg:col-span-4">
         <h2 class="font-serif text-3xl lg:text-4xl tracking-wide text-white">Current Focus</h2>
       </div>
       <div class="lg:col-span-8">
         <ul class="space-y-4 text-lg lg:text-xl text-slate-300 font-light leading-relaxed">
-          <!-- Fixed padding and layout structure -->
-          <li class="relative flex items-start gap-4 p-5 lg:p-6 rounded-2xl border border-transparent hover:bg-slate-800/30 hover:backdrop-blur-xl hover:border-white/10 hover:shadow-[0_0_30px_rgba(34,211,238,0.08)] transition-all duration-500 hover:-translate-y-1 group">
-            <span class="text-cyan-400 font-bold group-hover:text-cyan-300 transition-colors mt-1">—</span>
+          <li class="relative flex items-start gap-4 p-5 lg:p-6 rounded-2xl border border-transparent hover:bg-slate-800/30 hover:backdrop-blur-xl hover:border-white/10 hover:shadow-[0_0_30px_rgba(251,191,36,0.08)] transition-all duration-500 hover:-translate-y-1 group">
+            <span class="text-amber-400 font-bold group-hover:text-amber-300 transition-colors mt-1">—</span>
             <span class="block group-hover:text-white transition-colors duration-500">
               Leading Renesas’ India-for-India business unit, managing power management, sensing, and embedded analog semiconductor portfolios.
             </span>
           </li>
-          <li class="relative flex items-start gap-4 p-5 lg:p-6 rounded-2xl border border-transparent hover:bg-slate-800/30 hover:backdrop-blur-xl hover:border-white/10 hover:shadow-[0_0_30px_rgba(34,211,238,0.08)] transition-all duration-500 hover:-translate-y-1 group">
-            <span class="text-cyan-400 font-bold group-hover:text-cyan-300 transition-colors mt-1">—</span>
+          <li class="relative flex items-start gap-4 p-5 lg:p-6 rounded-2xl border border-transparent hover:bg-slate-800/30 hover:backdrop-blur-xl hover:border-white/10 hover:shadow-[0_0_30px_rgba(251,191,36,0.08)] transition-all duration-500 hover:-translate-y-1 group">
+            <span class="text-amber-400 font-bold group-hover:text-amber-300 transition-colors mt-1">—</span>
             <span class="block group-hover:text-white transition-colors duration-500">
               Shaping localized product roadmaps and accelerating market adoption across automotive, industrial, and energy segments.
             </span>
           </li>
-          <li class="relative flex items-start gap-4 p-5 lg:p-6 rounded-2xl border border-transparent hover:bg-slate-800/30 hover:backdrop-blur-xl hover:border-white/10 hover:shadow-[0_0_30px_rgba(34,211,238,0.08)] transition-all duration-500 hover:-translate-y-1 group">
-            <span class="text-cyan-400 font-bold group-hover:text-cyan-300 transition-colors mt-1">—</span>
+          <li class="relative flex items-start gap-4 p-5 lg:p-6 rounded-2xl border border-transparent hover:bg-slate-800/30 hover:backdrop-blur-xl hover:border-white/10 hover:shadow-[0_0_30px_rgba(251,191,36,0.08)] transition-all duration-500 hover:-translate-y-1 group">
+            <span class="text-amber-400 font-bold group-hover:text-amber-300 transition-colors mt-1">—</span>
             <span class="block group-hover:text-white transition-colors duration-500">
               Developing critical ecosystem partnerships to support sustainable scaling within India's rapidly evolving electronics hardware economy.
             </span>
@@ -121,7 +110,6 @@
       </div>
     </section>
 
-    <!-- Section 3: Track Record -->
     <section id="track-record" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 border-t border-white/10 pt-16 reveal">
       <div class="lg:col-span-4">
         <h2 class="font-serif text-3xl lg:text-4xl tracking-wide text-white">Track Record</h2>
@@ -129,27 +117,27 @@
       <div class="lg:col-span-8 space-y-16">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
           
-          <div class="group p-6 lg:p-8 rounded-2xl bg-slate-800/30 backdrop-blur-xl border border-white/10 hover:bg-slate-800/50 hover:border-cyan-400/50 hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal">
-            <div class="font-serif text-4xl lg:text-5xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400 transition-transform duration-500 group-hover:scale-105 origin-left group-hover:animate-text-gradient group-hover:from-white group-hover:to-cyan-200">$3B – $30B</div>
-            <div class="text-[10px] uppercase tracking-[0.2em] text-cyan-400 font-bold mt-4">Portfolio Management</div>
+          <div class="group p-6 lg:p-8 rounded-2xl bg-slate-800/30 backdrop-blur-xl border border-white/10 hover:bg-slate-800/50 hover:border-amber-400/50 hover:shadow-[0_0_30px_rgba(251,191,36,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal">
+            <div class="font-serif text-4xl lg:text-5xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400 transition-transform duration-500 group-hover:scale-105 origin-left group-hover:animate-text-gradient group-hover:from-white group-hover:to-amber-200">$3B – $30B</div>
+            <div class="text-[10px] uppercase tracking-[0.2em] text-amber-400 font-bold mt-4">Portfolio Management</div>
             <p class="text-base lg:text-lg text-slate-300 font-light pt-3">Executed go-to-market strategies, sales playbooks, and KPI architectures across global business structures.</p>
           </div>
           
-          <div class="group p-6 lg:p-8 rounded-2xl bg-slate-800/30 backdrop-blur-xl border border-white/10 hover:bg-slate-800/50 hover:border-cyan-400/50 hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal delay-100">
-            <div class="font-serif text-4xl lg:text-5xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400 transition-transform duration-500 group-hover:scale-105 origin-left group-hover:animate-text-gradient group-hover:from-white group-hover:to-cyan-200">+15% to 20%</div>
-            <div class="text-[10px] uppercase tracking-[0.2em] text-cyan-400 font-bold mt-4">Operational Efficiency</div>
+          <div class="group p-6 lg:p-8 rounded-2xl bg-slate-800/30 backdrop-blur-xl border border-white/10 hover:bg-slate-800/50 hover:border-amber-400/50 hover:shadow-[0_0_30px_rgba(251,191,36,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal delay-100">
+            <div class="font-serif text-4xl lg:text-5xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400 transition-transform duration-500 group-hover:scale-105 origin-left group-hover:animate-text-gradient group-hover:from-white group-hover:to-amber-200">+15% to 20%</div>
+            <div class="text-[10px] uppercase tracking-[0.2em] text-amber-400 font-bold mt-4">Operational Efficiency</div>
             <p class="text-base lg:text-lg text-slate-300 font-light pt-3">Built central program networks governing resource deployment, outsourcing, and analytics automation.</p>
           </div>
           
-          <div class="group p-6 lg:p-8 rounded-2xl bg-slate-800/30 backdrop-blur-xl border border-white/10 hover:bg-slate-800/50 hover:border-cyan-400/50 hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal">
-            <div class="font-serif text-4xl lg:text-5xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400 transition-transform duration-500 group-hover:scale-105 origin-left group-hover:animate-text-gradient group-hover:from-white group-hover:to-cyan-200">~10% Growth</div>
-            <div class="text-[10px] uppercase tracking-[0.2em] text-cyan-400 font-bold mt-4">Org Transformation</div>
+          <div class="group p-6 lg:p-8 rounded-2xl bg-slate-800/30 backdrop-blur-xl border border-white/10 hover:bg-slate-800/50 hover:border-amber-400/50 hover:shadow-[0_0_30px_rgba(251,191,36,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal">
+            <div class="font-serif text-4xl lg:text-5xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400 transition-transform duration-500 group-hover:scale-105 origin-left group-hover:animate-text-gradient group-hover:from-white group-hover:to-amber-200">~10% Growth</div>
+            <div class="text-[10px] uppercase tracking-[0.2em] text-amber-400 font-bold mt-4">Org Transformation</div>
             <p class="text-base lg:text-lg text-slate-300 font-light pt-3">Led post-merger integration strategies and commercial growth pilots during tenure at McKinsey & Company.</p>
           </div>
           
-          <div class="group p-6 lg:p-8 rounded-2xl bg-slate-800/30 backdrop-blur-xl border border-white/10 hover:bg-slate-800/50 hover:border-cyan-400/50 hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal delay-100">
-            <div class="font-serif text-4xl lg:text-5xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400 transition-transform duration-500 group-hover:scale-105 origin-left group-hover:animate-text-gradient group-hover:from-white group-hover:to-cyan-200">Patented</div>
-            <div class="text-[10px] uppercase tracking-[0.2em] text-cyan-400 font-bold mt-4">Deep-Tech Hardware</div>
+          <div class="group p-6 lg:p-8 rounded-2xl bg-slate-800/30 backdrop-blur-xl border border-white/10 hover:bg-slate-800/50 hover:border-amber-400/50 hover:shadow-[0_0_30px_rgba(251,191,36,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal delay-100">
+            <div class="font-serif text-4xl lg:text-5xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400 transition-transform duration-500 group-hover:scale-105 origin-left group-hover:animate-text-gradient group-hover:from-white group-hover:to-amber-200">Patented</div>
+            <div class="text-[10px] uppercase tracking-[0.2em] text-amber-400 font-bold mt-4">Deep-Tech Hardware</div>
             <p class="text-base lg:text-lg text-slate-300 font-light pt-3">Co-authored emergency utility safety mechanics and published global industrial research at Mitsubishi Heavy Industries.</p>
           </div>
 
@@ -157,7 +145,6 @@
       </div>
     </section>
 
-    <!-- Section 4: Secure Contact Surface -->
     <section id="contact" class="border-t border-white/10 pt-16 pb-24 reveal">
       <div class="max-w-2xl space-y-8">
         <h2 class="font-serif text-3xl lg:text-4xl tracking-wide text-white">Inbound</h2>
@@ -167,8 +154,8 @@
         
         <div class="pt-4 lg:pt-6">
           <a href="https://www.linkedin.com/in/abhay-jain-10" target="_blank" rel="noopener noreferrer" class="relative inline-flex items-center justify-center px-6 lg:px-8 py-4 bg-transparent rounded-full group overflow-hidden w-full sm:w-auto">
-            <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-cyan-600 to-blue-600 opacity-80 group-hover:opacity-100 transition-opacity duration-300"></span>
-            <span class="absolute bottom-0 right-0 block w-64 h-64 mb-32 mr-4 transition duration-500 origin-bottom-left transform rotate-45 translate-x-24 bg-cyan-400 opacity-30 group-hover:rotate-90 ease"></span>
+            <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-amber-600 to-yellow-600 opacity-80 group-hover:opacity-100 transition-opacity duration-300"></span>
+            <span class="absolute bottom-0 right-0 block w-64 h-64 mb-32 mr-4 transition duration-500 origin-bottom-left transform rotate-45 translate-x-24 bg-amber-400 opacity-30 group-hover:rotate-90 ease"></span>
             <span class="relative flex items-center gap-4 text-xs font-bold tracking-widest uppercase text-white">
               Connect on LinkedIn
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transform transition-transform duration-300 group-hover:translate-x-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -185,7 +172,6 @@
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const reveals = document.querySelectorAll(".reveal");
-      
       const revealOnScroll = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -193,17 +179,10 @@
             observer.unobserve(entry.target);
           }
         });
-      }, {
-        root: null,
-        threshold: 0.1,
-        rootMargin: "0px 0px -20px 0px"
-      });
+      }, { root: null, threshold: 0.1, rootMargin: "0px 0px -20px 0px" });
 
       reveals.forEach(reveal => revealOnScroll.observe(reveal));
-      
-      setTimeout(() => {
-        document.querySelectorAll('.reveal.active').forEach(el => el.style.opacity = "1");
-      }, 100);
+      setTimeout(() => { document.querySelectorAll('.reveal.active').forEach(el => el.style.opacity = "1"); }, 100);
     });
   </script>
 </body>
