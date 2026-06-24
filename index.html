@@ -1,68 +1,69 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth bg-[#FAF9F6] text-[#1A1A1A]">
+<html lang="en" class="scroll-smooth text-[#111111]">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abhay Jain — Executive Positioning</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
-    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+    body { font-family: 'Inter', sans-serif; }
   </style>
 </head>
-<body class="antialiased selection:bg-neutral-200">
+<body class="antialiased selection:bg-neutral-800 selection:text-white relative min-h-screen">
 
-  <!-- Minimal Header -->
-  <header class="sticky top-0 z-50 border-b border-neutral-200 bg-[#FAF9F6]/80 backdrop-blur-md">
-    <div class="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-      <a href="#" class="text-sm font-medium tracking-tight hover:opacity-70 transition-opacity">Abhay Jain</a>
-      <nav class="flex items-center gap-6 text-xs tracking-wider uppercase text-neutral-500">
-        <a href="#focus" class="hover:text-[#1A1A1A] transition-colors">Focus</a>
-        <a href="#track-record" class="hover:text-[#1A1A1A] transition-colors">Track Record</a>
-        <a href="#contact" class="font-medium text-[#1A1A1A] hover:opacity-70 transition-opacity">Contact</a>
+  <!-- Fixed Background with Frosted Glass Effect -->
+  <div class="fixed inset-0 z-[-1]">
+    <!-- Background Image -->
+    <img src="Abhay Jain banner pic.jpg" class="w-full h-full object-cover opacity-60 grayscale" alt="">
+    <!-- Glassmorphism Blur Overlay -->
+    <div class="absolute inset-0 bg-white/85 backdrop-blur-2xl"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 border-b border-neutral-300/50 bg-white/50 backdrop-blur-md">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+      <a href="#" class="text-xl font-bold tracking-tight">Abhay Jain</a>
+      <nav class="flex items-center gap-8 text-sm font-semibold tracking-wide uppercase text-neutral-600">
+        <a href="#focus" class="hover:text-black transition-colors">Focus</a>
+        <a href="#track-record" class="hover:text-black transition-colors">Track Record</a>
+        <a href="#contact" class="text-black hover:opacity-70 transition-opacity">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main class="mx-auto max-w-5xl px-6 py-12 md:py-24 space-y-24 md:space-y-36">
+  <main class="mx-auto max-w-6xl px-6 py-16 md:py-32 space-y-32">
 
     <!-- Section 1: Above-The-Fold Hero Section -->
-    <section class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start pt-4">
-      <div class="md:col-span-8 space-y-6">
-        <h1 class="text-4xl md:text-5xl font-light tracking-tight text-neutral-900 leading-tight">
+    <section class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+      <div class="md:col-span-8 space-y-8">
+        <h1 class="text-6xl md:text-8xl font-bold tracking-tight text-black leading-none">
           Abhay Jain
         </h1>
-        <p class="text-lg md:text-xl font-normal text-neutral-600 max-w-2xl leading-relaxed">
-          Business Division Leader at Renesas Electronics. Semiconductor business leader bridging technology, localized product strategy, and cross-functional operations across global markets.
+        <p class="text-2xl md:text-3xl font-light text-neutral-800 max-w-3xl leading-snug">
+          Business Division Leader at Renesas Electronics. Bridging technology, localized product strategy, and cross-functional operations.
         </p>
-        <div class="pt-4 flex flex-wrap gap-3 text-xs tracking-wide text-neutral-500 uppercase">
-          <span>Silicon Valley Legacy</span>
-          <span class="text-neutral-300">•</span>
-          <span>Bengaluru Ecosystem</span>
-          <span class="text-neutral-300">•</span>
-          <span>Stanford GSB</span>
-        </div>
       </div>
-      <!-- Understated Headshot Positioning -->
+      <!-- Headshot -->
       <div class="md:col-span-4 flex justify-start md:justify-end">
-        <img src="Abhay Jain profile pic.jpg" alt="Abhay Jain" class="w-40 h-40 md:w-48 md:h-48 object-cover filter grayscale contrast-125 border border-neutral-200 rounded-none shadow-sm">
+        <img src="Abhay Jain profile pic.jpg" alt="Abhay Jain" class="w-56 h-56 md:w-72 md:h-72 object-cover grayscale shadow-2xl border-4 border-white rounded-lg">
       </div>
     </section>
 
     <!-- Section 2: Current Focus Area -->
-    <section id="focus" class="grid grid-cols-1 md:grid-cols-12 gap-8 pt-8 border-t border-neutral-200">
+    <section id="focus" class="grid grid-cols-1 md:grid-cols-12 gap-12 border-t border-neutral-300/60 pt-16">
       <div class="md:col-span-4">
-        <h2 class="text-xs font-semibold tracking-widest uppercase text-neutral-400">01 / Current Focus</h2>
+        <h2 class="text-lg font-bold tracking-widest uppercase text-neutral-900">01 / Current Focus</h2>
       </div>
       <div class="md:col-span-8">
-        <ul class="space-y-6 text-base text-neutral-700 font-light leading-relaxed">
-          <li class="relative pl-6 before:content-['-'] before:absolute before:left-0 before:text-neutral-400">
+        <ul class="space-y-8 text-xl text-neutral-800 font-light leading-relaxed">
+          <li class="relative pl-8 before:content-['—'] before:absolute before:left-0 before:text-black before:font-bold">
             Leading Renesas’ India-for-India business unit, managing power management, sensing, and embedded analog semiconductor portfolios.
           </li>
-          <li class="relative pl-6 before:content-['-'] before:absolute before:left-0 before:text-neutral-400">
+          <li class="relative pl-8 before:content-['—'] before:absolute before:left-0 before:text-black before:font-bold">
             Shaping localized product roadmaps and accelerating market adoption across automotive, industrial, and energy segments.
           </li>
-          <li class="relative pl-6 before:content-['-'] before:absolute before:left-0 before:text-neutral-400">
+          <li class="relative pl-8 before:content-['—'] before:absolute before:left-0 before:text-black before:font-bold">
             Developing critical ecosystem partnerships to support sustainable scaling within India's rapidly evolving electronics hardware economy.
           </li>
         </ul>
@@ -70,98 +71,50 @@
     </section>
 
     <!-- Section 3: High-Signal Track Record -->
-    <section id="track-record" class="grid grid-cols-1 md:grid-cols-12 gap-8 pt-8 border-t border-neutral-200">
+    <section id="track-record" class="grid grid-cols-1 md:grid-cols-12 gap-12 border-t border-neutral-300/60 pt-16">
       <div class="md:col-span-4">
-        <h2 class="text-xs font-semibold tracking-widest uppercase text-neutral-400">02 / Track Record</h2>
+        <h2 class="text-lg font-bold tracking-widest uppercase text-neutral-900">02 / Track Record</h2>
       </div>
-      <div class="md:col-span-8 space-y-12">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-          <div class="space-y-2">
-            <div class="text-2xl font-light text-neutral-900">$3B – $30B</div>
-            <div class="text-xs uppercase tracking-wider text-neutral-400 font-medium">Portfolio Management</div>
-            <p class="text-sm text-neutral-600 font-light pt-1">Served as Chief of Staff executing go-to-market strategies, sales playbooks, and KPI architectures across global business structures.</p>
+      <div class="md:col-span-8 space-y-16">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-12">
+          <div class="space-y-3">
+            <div class="text-5xl font-bold text-black">$3B – $30B</div>
+            <div class="text-sm uppercase tracking-widest text-neutral-600 font-semibold">Portfolio Management</div>
+            <p class="text-lg text-neutral-800 font-light pt-2">Executed go-to-market strategies, sales playbooks, and KPI architectures across global business structures.</p>
           </div>
-          <div class="space-y-2">
-            <div class="text-2xl font-light text-neutral-900">+15% to 20%</div>
-            <div class="text-xs uppercase tracking-wider text-neutral-400 font-medium">Operational Efficiency</div>
-            <p class="text-sm text-neutral-600 font-light pt-1">Built central program management networks governing resource deployment, outsourcing, and analytics automation.</p>
+          <div class="space-y-3">
+            <div class="text-5xl font-bold text-black">+15% to 20%</div>
+            <div class="text-sm uppercase tracking-widest text-neutral-600 font-semibold">Operational Efficiency</div>
+            <p class="text-lg text-neutral-800 font-light pt-2">Built central program networks governing resource deployment, outsourcing, and analytics automation.</p>
           </div>
-          <div class="space-y-2">
-            <div class="text-2xl font-light text-neutral-900">~10% Growth</div>
-            <div class="text-xs uppercase tracking-wider text-neutral-400 font-medium">Organizational Transformation</div>
-            <p class="text-sm text-neutral-600 font-light pt-1">Led post-merger integration strategies and commercial growth pilots during tenure at McKinsey & Company.</p>
+          <div class="space-y-3">
+            <div class="text-5xl font-bold text-black">~10% Growth</div>
+            <div class="text-sm uppercase tracking-widest text-neutral-600 font-semibold">Organizational Transformation</div>
+            <p class="text-lg text-neutral-800 font-light pt-2">Led post-merger integration strategies and commercial growth pilots during tenure at McKinsey & Company.</p>
           </div>
-          <div class="space-y-2">
-            <div class="text-2xl font-light text-neutral-900">Patented Tech</div>
-            <div class="text-xs uppercase tracking-wider text-neutral-400 font-medium">Deep-Tech Hardware</div>
-            <p class="text-sm text-neutral-600 font-light pt-1">Co-authored emergency utility safety mechanics and published global industrial research at Mitsubishi Heavy Industries.</p>
-          </div>
-        </div>
-
-        <!-- Strategic High-Credibility Banner Placement -->
-        <div class="pt-4">
-          <figure class="space-y-2">
-            <img src="pic 1.jpg" alt="Abhay Jain with Dr. A.P.J. Abdul Kalam" class="w-full h-auto max-h-72 object-cover filter grayscale contrast-115 border border-neutral-200">
-            <figcaption class="text-[11px] tracking-wide text-neutral-400 font-light italic">
-              Context: Presenting technical frameworks alongside the late Dr. A.P.J. Abdul Kalam.
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 4: Pedigree & Affiliations -->
-    <section id="pedigree" class="grid grid-cols-1 md:grid-cols-12 gap-8 pt-8 border-t border-neutral-200">
-      <div class="md:col-span-4">
-        <h2 class="text-xs font-semibold tracking-widest uppercase text-neutral-400">03 / Affiliations</h2>
-      </div>
-      <div class="md:col-span-8">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-4 text-sm font-light text-neutral-700">
-          <div>
-            <h4 class="font-medium text-neutral-900">Stanford University</h4>
-            <p class="text-xs text-neutral-400">MBA (GSB) & MS (Energy & Environment)</p>
-          </div>
-          <div>
-            <h4 class="font-medium text-neutral-900">IIT Kanpur</h4>
-            <p class="text-xs text-neutral-400">B.Tech, Materials and Metallurgical Engineering</p>
-          </div>
-          <div>
-            <h4 class="font-medium text-neutral-900">McKinsey & Company</h4>
-            <p class="text-xs text-neutral-400">Engagement Manager — Tech Infra & Clean Tech</p>
-          </div>
-          <div>
-            <h4 class="font-medium text-neutral-900">Mitsubishi Heavy Industries</h4>
-            <p class="text-xs text-neutral-400">Global Sales Executive & Systems Engineer (Tokyo)</p>
+          <div class="space-y-3">
+            <div class="text-5xl font-bold text-black">Patented</div>
+            <div class="text-sm uppercase tracking-widest text-neutral-600 font-semibold">Deep-Tech Hardware</div>
+            <p class="text-lg text-neutral-800 font-light pt-2">Co-authored emergency utility safety mechanics and published global industrial research at Mitsubishi Heavy Industries.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Section 5: Secure Contact Surface -->
-    <section id="contact" class="pt-8 border-t border-neutral-200 pb-12">
-      <div class="max-w-xl space-y-4">
-        <h2 class="text-xs font-semibold tracking-widest uppercase text-neutral-400">04 / Inbound</h2>
-        <p class="text-sm font-light text-neutral-600 leading-relaxed">
+    <!-- Section 4: Secure Contact Surface -->
+    <section id="contact" class="border-t border-neutral-300/60 pt-16 pb-16">
+      <div class="max-w-2xl space-y-6">
+        <h2 class="text-lg font-bold tracking-widest uppercase text-neutral-900">03 / Inbound</h2>
+        <p class="text-xl font-light text-neutral-800 leading-relaxed">
           Open to precise conversations regarding advisory positions, semiconductor ecosystem strategies, or institutional alignment.
         </p>
-        <div class="pt-2 flex items-center gap-6 text-sm font-medium">
-          <a href="mailto:contact@abhayjain.net" class="text-neutral-900 underline underline-offset-4 hover:opacity-70 transition-opacity">Direct Email</a>
-          <a href="https://www.linkedin.com/in/abhay-jain-10" target="_blank" rel="noopener noreferrer" class="text-neutral-900 underline underline-offset-4 hover:opacity-70 transition-opacity">LinkedIn Profile</a>
+        <div class="pt-6 flex items-center gap-8 text-lg font-semibold">
+          <a href="mailto:contact@abhayjain.net" class="text-black underline underline-offset-8 hover:text-neutral-500 transition-colors">Direct Email</a>
+          <a href="https://www.linkedin.com/in/abhay-jain-10" target="_blank" rel="noopener noreferrer" class="text-black underline underline-offset-8 hover:text-neutral-500 transition-colors">LinkedIn Profile</a>
         </div>
       </div>
     </section>
 
   </main>
-
-  <footer class="border-t border-neutral-200 bg-neutral-100 py-6 text-center text-[11px] text-neutral-400 font-light">
-    <div class="mx-auto max-w-5xl px-6 flex flex-col sm:flex-row items-center justify-between gap-2">
-      <div>© 2026 Abhay Jain. All rights reserved.</div>
-      <div class="flex gap-4">
-        <a href="#" class="hover:underline">Privacy Policy</a>
-        <a href="#" class="hover:underline">Cookie Settings</a>
-      </div>
-    </div>
-  </footer>
-
 </body>
 </html>
