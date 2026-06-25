@@ -58,12 +58,12 @@
 
   <!-- Dynamic Animated Background (Elevated Light Mode & Purple Dark Mode) -->
   <div class="fixed inset-0 z-[-1] overflow-hidden bg-[#FAFAFA] dark:bg-slate-950 transition-colors duration-700">
-    <!-- Orb 1: Violet/Cyan -->
-    <div class="absolute top-[-10%] left-[-10%] w-[80%] lg:w-[60%] h-[60%] rounded-full bg-violet-200/60 dark:bg-cyan-900/40 blur-[100px] lg:blur-[120px] animate-breathe transition-colors duration-700"></div>
-    <!-- Orb 2: Sky Blue/Indigo -->
-    <div class="absolute bottom-[-10%] right-[-10%] w-[80%] lg:w-[60%] h-[60%] rounded-full bg-sky-200/50 dark:bg-indigo-900/40 blur-[100px] lg:blur-[120px] animate-breathe transition-colors duration-700" style="animation-delay: -6s;"></div>
-    <!-- Orb 3: Ice Indigo/Deep Violet -->
-    <div class="absolute top-[20%] right-[20%] w-[40%] h-[40%] rounded-full bg-indigo-100/60 dark:bg-violet-900/20 blur-[100px] animate-breathe transition-colors duration-700" style="animation-delay: -3s;"></div>
+    <!-- Orb 1: Rich Violet/Cyan -->
+    <div class="absolute top-[-10%] left-[-10%] w-[80%] lg:w-[60%] h-[60%] rounded-full bg-violet-300/50 dark:bg-cyan-900/40 blur-[90px] lg:blur-[100px] animate-breathe transition-colors duration-700"></div>
+    <!-- Orb 2: Deep Sky Blue/Indigo -->
+    <div class="absolute bottom-[-10%] right-[-10%] w-[80%] lg:w-[60%] h-[60%] rounded-full bg-sky-300/50 dark:bg-indigo-900/40 blur-[90px] lg:blur-[100px] animate-breathe transition-colors duration-700" style="animation-delay: -6s;"></div>
+    <!-- Orb 3: Icy Indigo/Deep Violet -->
+    <div class="absolute top-[20%] right-[20%] w-[40%] h-[40%] rounded-full bg-indigo-300/40 dark:bg-violet-900/20 blur-[90px] animate-breathe transition-colors duration-700" style="animation-delay: -3s;"></div>
   </div>
 
   <!-- Header -->
@@ -238,13 +238,12 @@
 
   </main>
 
-  <!-- NEW SECTION: Wide Cinematic Contact Banner -->
+  <!-- Wide Cinematic Contact Banner (Shifted to 80% Center) -->
   <section id="contact" class="relative max-w-7xl mx-auto mb-12 sm:mb-24 rounded-[2rem] overflow-hidden reveal transition-colors duration-700 shadow-2xl">
     
-    <!-- Deep Glassmorphism & APJ Kalam Background -->
     <div class="absolute inset-0 z-0">
-      <img src="Abhay_Jain_banner_pic.jpg" class="w-full h-full object-cover opacity-60 dark:opacity-40 mix-blend-multiply dark:mix-blend-luminosity grayscale" alt="Context: Presenting technical frameworks alongside Dr. A.P.J. Abdul Kalam.">
-      <!-- Gradient masks to blend it smoothly -->
+      <!-- Image shifted to focus on the right side where APJ Kalam is seated -->
+      <img src="Abhay_Jain_banner_pic.jpg" class="w-full h-full object-cover object-[80%_center] opacity-60 dark:opacity-40 mix-blend-multiply dark:mix-blend-luminosity grayscale" alt="Context: Presenting technical frameworks alongside Dr. A.P.J. Abdul Kalam.">
       <div class="absolute inset-0 bg-gradient-to-t from-white/95 via-white/80 to-transparent dark:from-slate-950/95 dark:via-slate-900/80 dark:to-transparent transition-colors duration-700"></div>
       <div class="absolute inset-0 backdrop-blur-md dark:backdrop-blur-xl"></div>
     </div>
@@ -276,7 +275,6 @@
   </footer>
 
   <script>
-    // Theme Toggle Logic
     const themeToggleBtn = document.getElementById('theme-toggle');
     const darkIcon = document.getElementById('theme-toggle-dark-icon');
     const lightIcon = document.getElementById('theme-toggle-light-icon');
@@ -310,7 +308,6 @@
       }
     });
 
-    // Scroll Reveal Logic
     document.addEventListener("DOMContentLoaded", () => {
       const reveals = document.querySelectorAll(".reveal");
       const revealOnScroll = new IntersectionObserver((entries, observer) => {
