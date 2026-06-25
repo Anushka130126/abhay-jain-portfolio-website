@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- The 'dark' class is applied by default, but our script will handle the toggle -->
 <html lang="en" class="scroll-smooth dark">
 <head>
   <meta charset="UTF-8">
@@ -10,7 +9,6 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22 font-family=%22serif%22 font-weight=%22bold%22 fill=%22%230f172a%22>AJ</text></svg>">
   
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Configure Tailwind to use manual class-based dark mode -->
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -58,11 +56,12 @@
 </head>
 <body class="antialiased bg-[#FAFAFA] text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-700 relative min-h-screen">
 
-  <!-- Dynamic Animated Background -->
+  <!-- Dynamic Animated Background (Now with Indigo/Purple blend) -->
   <div class="fixed inset-0 z-[-1] overflow-hidden bg-[#FAFAFA] dark:bg-slate-950 transition-colors duration-700">
-    <!-- Light Mode Orbs -->
     <div class="absolute top-[-10%] left-[-10%] w-[80%] lg:w-[60%] h-[60%] rounded-full bg-slate-200/50 dark:bg-cyan-900/40 blur-[100px] lg:blur-[120px] animate-breathe transition-colors duration-700"></div>
-    <div class="absolute bottom-[-10%] right-[-10%] w-[80%] lg:w-[60%] h-[60%] rounded-full bg-slate-300/40 dark:bg-blue-900/30 blur-[100px] lg:blur-[120px] animate-breathe transition-colors duration-700" style="animation-delay: -6s;"></div>
+    <!-- Adjusted to Indigo/Violet for a subtle purple injection -->
+    <div class="absolute bottom-[-10%] right-[-10%] w-[80%] lg:w-[60%] h-[60%] rounded-full bg-slate-300/40 dark:bg-indigo-900/40 blur-[100px] lg:blur-[120px] animate-breathe transition-colors duration-700" style="animation-delay: -6s;"></div>
+    <div class="absolute top-[20%] right-[20%] w-[40%] h-[40%] rounded-full bg-transparent dark:bg-violet-900/20 blur-[100px] animate-breathe transition-colors duration-700" style="animation-delay: -3s;"></div>
   </div>
 
   <!-- Header -->
@@ -77,11 +76,8 @@
           <a href="#contact" class="text-slate-900 dark:text-white hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors duration-300">Contact</a>
         </nav>
         
-        <!-- Theme Toggle Button -->
         <button id="theme-toggle" class="p-2 rounded-full bg-slate-100 dark:bg-white/10 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-white/20 transition-all duration-300" aria-label="Toggle Dark Mode">
-          <!-- Sun Icon (Hidden in Dark Mode) -->
           <svg id="theme-toggle-light-icon" class="w-4 h-4 hidden dark:block" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg>
-          <!-- Moon Icon (Hidden in Light Mode) -->
           <svg id="theme-toggle-dark-icon" class="w-4 h-4 block dark:hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
         </button>
       </div>
@@ -93,17 +89,16 @@
     <!-- Section 1: Hero -->
     <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center reveal active">
       <div class="lg:col-span-8 space-y-6 lg:space-y-8 order-2 lg:order-1 text-center lg:text-left">
-        <h1 class="font-serif text-5xl sm:text-6xl lg:text-8xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-slate-600 to-slate-800 dark:from-white dark:via-cyan-200 dark:to-blue-400 animate-text-gradient leading-tight pb-2 transition-all duration-700">
+        <h1 class="font-serif text-5xl sm:text-6xl lg:text-8xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-slate-600 to-slate-800 dark:from-white dark:via-cyan-200 dark:to-indigo-400 animate-text-gradient leading-tight pb-2 transition-all duration-700">
           Abhay Jain
         </h1>
         <p class="text-xl sm:text-2xl lg:text-3xl font-light text-slate-600 dark:text-slate-200 max-w-3xl leading-snug mx-auto lg:mx-0 transition-colors duration-700">
           Business Division Leader at Renesas Electronics. Bridging technology, localized product strategy, and cross-functional operations.
         </p>
       </div>
-      <!-- Headshot -->
       <div class="lg:col-span-4 flex justify-center lg:justify-end order-1 lg:order-2">
         <div class="relative group cursor-pointer reveal active delay-200">
-          <div class="absolute inset-0 bg-slate-200 dark:bg-cyan-500/30 rounded-lg blur-2xl group-hover:bg-slate-300 dark:group-hover:bg-cyan-400/50 transition-all duration-700"></div>
+          <div class="absolute inset-0 bg-slate-200 dark:bg-cyan-500/30 rounded-lg blur-2xl group-hover:bg-slate-300 dark:group-hover:bg-indigo-400/50 transition-all duration-700"></div>
           <img src="Abhay_Jain_profile_pic.jpg" alt="Abhay Jain" class="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-72 lg:h-72 object-cover shadow-[0_20px_40px_rgba(0,0,0,0.1)] dark:shadow-[0_0_40px_rgba(0,0,0,0.5)] border border-white/60 dark:border-white/20 rounded-lg group-hover:-translate-y-3 group-hover:scale-[1.02] transition-all duration-700 ease-out">
         </div>
       </div>
@@ -138,34 +133,43 @@
       </div>
     </section>
 
-    <!-- NEW SECTION: Pedigree & Affiliations -->
+    <!-- UPGRADED SECTION: Pedigree & Affiliations -->
     <section id="pedigree" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 border-t border-slate-200 dark:border-white/10 pt-16 reveal transition-colors duration-700">
       <div class="lg:col-span-4">
         <h2 class="font-serif text-3xl lg:text-4xl tracking-wide text-slate-900 dark:text-white transition-colors duration-700">Pedigree</h2>
       </div>
-      <div class="lg:col-span-8">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-          <div class="space-y-1">
-            <h3 class="font-bold text-slate-900 dark:text-white">Stanford University</h3>
-            <p class="text-sm text-slate-600 dark:text-slate-400">MBA (Graduate School of Business) & MS (Energy & Environment)</p>
+      <div class="lg:col-span-8 space-y-16">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
+          
+          <div class="group p-6 lg:p-8 rounded-2xl bg-white dark:bg-slate-800/30 backdrop-blur-xl border border-slate-200 dark:border-white/10 hover:border-cyan-600/50 dark:hover:border-cyan-400/50 shadow-sm dark:shadow-none hover:shadow-lg dark:hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal">
+            <h3 class="font-serif text-2xl lg:text-3xl tracking-wide text-slate-900 dark:text-white transition-colors duration-500 group-hover:text-cyan-600 dark:group-hover:text-cyan-300">Stanford University</h3>
+            <div class="text-[10px] uppercase tracking-[0.2em] text-cyan-600 dark:text-cyan-400 font-bold mt-4 transition-colors">Education</div>
+            <p class="text-base text-slate-600 dark:text-slate-300 font-light pt-3 transition-colors duration-700">MBA (Graduate School of Business) & MS (Energy & Environment)[cite: 1].</p>
           </div>
-          <div class="space-y-1">
-            <h3 class="font-bold text-slate-900 dark:text-white">Indian Institute of Technology, Kanpur</h3>
-            <p class="text-sm text-slate-600 dark:text-slate-400">B.Tech, Materials and Metallurgical Engineering</p>
+          
+          <div class="group p-6 lg:p-8 rounded-2xl bg-white dark:bg-slate-800/30 backdrop-blur-xl border border-slate-200 dark:border-white/10 hover:border-cyan-600/50 dark:hover:border-cyan-400/50 shadow-sm dark:shadow-none hover:shadow-lg dark:hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal delay-100">
+            <h3 class="font-serif text-2xl lg:text-3xl tracking-wide text-slate-900 dark:text-white transition-colors duration-500 group-hover:text-cyan-600 dark:group-hover:text-cyan-300">IIT Kanpur</h3>
+            <div class="text-[10px] uppercase tracking-[0.2em] text-cyan-600 dark:text-cyan-400 font-bold mt-4 transition-colors">Education</div>
+            <p class="text-base text-slate-600 dark:text-slate-300 font-light pt-3 transition-colors duration-700">B.Tech, Materials and Metallurgical Engineering[cite: 1].</p>
           </div>
-          <div class="space-y-1">
-            <h3 class="font-bold text-slate-900 dark:text-white">McKinsey & Company</h3>
-            <p class="text-sm text-slate-600 dark:text-slate-400">Engagement Manager</p>
+
+          <div class="group p-6 lg:p-8 rounded-2xl bg-white dark:bg-slate-800/30 backdrop-blur-xl border border-slate-200 dark:border-white/10 hover:border-cyan-600/50 dark:hover:border-cyan-400/50 shadow-sm dark:shadow-none hover:shadow-lg dark:hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal">
+            <h3 class="font-serif text-2xl lg:text-3xl tracking-wide text-slate-900 dark:text-white transition-colors duration-500 group-hover:text-cyan-600 dark:group-hover:text-cyan-300">McKinsey & Co.</h3>
+            <div class="text-[10px] uppercase tracking-[0.2em] text-cyan-600 dark:text-cyan-400 font-bold mt-4 transition-colors">Tenure</div>
+            <p class="text-base text-slate-600 dark:text-slate-300 font-light pt-3 transition-colors duration-700">Engagement Manager driving commercial growth and operational excellence[cite: 1].</p>
           </div>
-          <div class="space-y-1">
-            <h3 class="font-bold text-slate-900 dark:text-white">Mitsubishi Heavy Industries</h3>
-            <p class="text-sm text-slate-600 dark:text-slate-400">Global Sales Executive & Deep-Tech Engineer</p>
+
+          <div class="group p-6 lg:p-8 rounded-2xl bg-white dark:bg-slate-800/30 backdrop-blur-xl border border-slate-200 dark:border-white/10 hover:border-cyan-600/50 dark:hover:border-cyan-400/50 shadow-sm dark:shadow-none hover:shadow-lg dark:hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal delay-100">
+            <h3 class="font-serif text-2xl lg:text-3xl tracking-wide text-slate-900 dark:text-white transition-colors duration-500 group-hover:text-cyan-600 dark:group-hover:text-cyan-300">Mitsubishi Heavy</h3>
+            <div class="text-[10px] uppercase tracking-[0.2em] text-cyan-600 dark:text-cyan-400 font-bold mt-4 transition-colors">Tenure</div>
+            <p class="text-base text-slate-600 dark:text-slate-300 font-light pt-3 transition-colors duration-700">Global Sales Executive & Deep-Tech Engineer stationed in Tokyo[cite: 1].</p>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- NEW SECTION: Emerging Tech & Innovation -->
+    <!-- Emerging Tech & Innovation -->
     <section id="innovation" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 border-t border-slate-200 dark:border-white/10 pt-16 reveal transition-colors duration-700">
       <div class="lg:col-span-4">
         <h2 class="font-serif text-3xl lg:text-4xl tracking-wide text-slate-900 dark:text-white transition-colors duration-700">Emerging Tech</h2>
@@ -204,25 +208,25 @@
           
           <div class="group p-6 lg:p-8 rounded-2xl bg-white dark:bg-slate-800/30 backdrop-blur-xl border border-slate-200 dark:border-white/10 hover:border-cyan-600/50 dark:hover:border-cyan-400/50 shadow-sm dark:shadow-none hover:shadow-lg dark:hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal">
             <div class="font-serif text-4xl lg:text-5xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-500 dark:from-white dark:to-slate-400 transition-transform duration-500 group-hover:scale-105 origin-left group-hover:animate-text-gradient group-hover:from-slate-900 group-hover:to-cyan-600 dark:group-hover:from-white dark:group-hover:to-cyan-200">$3B – $30B</div>
-            <div class="text-[10px] uppercase tracking-[0.2em] text-cyan-600 dark:text-cyan-400 font-bold mt-4">Portfolio Management</div>
+            <div class="text-[10px] uppercase tracking-[0.2em] text-cyan-600 dark:text-cyan-400 font-bold mt-4 transition-colors">Portfolio Management</div>
             <p class="text-base lg:text-lg text-slate-600 dark:text-slate-300 font-light pt-3 transition-colors duration-700">Executed go-to-market strategies, sales playbooks, and KPI architectures across global business structures.</p>
           </div>
           
           <div class="group p-6 lg:p-8 rounded-2xl bg-white dark:bg-slate-800/30 backdrop-blur-xl border border-slate-200 dark:border-white/10 hover:border-cyan-600/50 dark:hover:border-cyan-400/50 shadow-sm dark:shadow-none hover:shadow-lg dark:hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal delay-100">
             <div class="font-serif text-4xl lg:text-5xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-500 dark:from-white dark:to-slate-400 transition-transform duration-500 group-hover:scale-105 origin-left group-hover:animate-text-gradient group-hover:from-slate-900 group-hover:to-cyan-600 dark:group-hover:from-white dark:group-hover:to-cyan-200">+15% to 20%</div>
-            <div class="text-[10px] uppercase tracking-[0.2em] text-cyan-600 dark:text-cyan-400 font-bold mt-4">Operational Efficiency</div>
+            <div class="text-[10px] uppercase tracking-[0.2em] text-cyan-600 dark:text-cyan-400 font-bold mt-4 transition-colors">Operational Efficiency</div>
             <p class="text-base lg:text-lg text-slate-600 dark:text-slate-300 font-light pt-3 transition-colors duration-700">Built central program networks governing resource deployment, outsourcing, and analytics automation.</p>
           </div>
           
           <div class="group p-6 lg:p-8 rounded-2xl bg-white dark:bg-slate-800/30 backdrop-blur-xl border border-slate-200 dark:border-white/10 hover:border-cyan-600/50 dark:hover:border-cyan-400/50 shadow-sm dark:shadow-none hover:shadow-lg dark:hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal">
             <div class="font-serif text-4xl lg:text-5xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-500 dark:from-white dark:to-slate-400 transition-transform duration-500 group-hover:scale-105 origin-left group-hover:animate-text-gradient group-hover:from-slate-900 group-hover:to-cyan-600 dark:group-hover:from-white dark:group-hover:to-cyan-200">~10% Growth</div>
-            <div class="text-[10px] uppercase tracking-[0.2em] text-cyan-600 dark:text-cyan-400 font-bold mt-4">Org Transformation</div>
+            <div class="text-[10px] uppercase tracking-[0.2em] text-cyan-600 dark:text-cyan-400 font-bold mt-4 transition-colors">Org Transformation</div>
             <p class="text-base lg:text-lg text-slate-600 dark:text-slate-300 font-light pt-3 transition-colors duration-700">Led post-merger integration strategies and commercial growth pilots during tenure at McKinsey & Company.</p>
           </div>
           
           <div class="group p-6 lg:p-8 rounded-2xl bg-white dark:bg-slate-800/30 backdrop-blur-xl border border-slate-200 dark:border-white/10 hover:border-cyan-600/50 dark:hover:border-cyan-400/50 shadow-sm dark:shadow-none hover:shadow-lg dark:hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal delay-100">
             <div class="font-serif text-4xl lg:text-5xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-500 dark:from-white dark:to-slate-400 transition-transform duration-500 group-hover:scale-105 origin-left group-hover:animate-text-gradient group-hover:from-slate-900 group-hover:to-cyan-600 dark:group-hover:from-white dark:group-hover:to-cyan-200">Patented</div>
-            <div class="text-[10px] uppercase tracking-[0.2em] text-cyan-600 dark:text-cyan-400 font-bold mt-4">Deep-Tech Hardware</div>
+            <div class="text-[10px] uppercase tracking-[0.2em] text-cyan-600 dark:text-cyan-400 font-bold mt-4 transition-colors">Deep-Tech Hardware</div>
             <p class="text-base lg:text-lg text-slate-600 dark:text-slate-300 font-light pt-3 transition-colors duration-700">Co-authored emergency utility safety mechanics and published global industrial research at Mitsubishi Heavy Industries.</p>
           </div>
 
@@ -239,8 +243,8 @@
         </p>
         
         <div class="pt-4 lg:pt-6">
-          <a href="https://www.linkedin.com/in/abhay-jain-10" target="_blank" rel="noopener noreferrer" class="relative inline-flex items-center justify-center px-6 lg:px-8 py-4 bg-slate-900 dark:bg-transparent rounded-full group overflow-hidden w-full sm:w-auto shadow-lg dark:shadow-none">
-            <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-cyan-600 to-blue-600 opacity-0 dark:opacity-80 group-hover:opacity-100 transition-opacity duration-300"></span>
+          <a href="https://www.linkedin.com/in/abhay-jain-10" target="_blank" rel="noopener noreferrer" class="relative inline-flex items-center justify-center px-6 lg:px-8 py-4 bg-slate-900 dark:bg-transparent rounded-full group overflow-hidden w-full sm:w-auto shadow-lg dark:shadow-none transition-colors">
+            <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-cyan-600 to-indigo-600 opacity-0 dark:opacity-80 group-hover:opacity-100 transition-opacity duration-300"></span>
             <span class="absolute bottom-0 right-0 block w-64 h-64 mb-32 mr-4 transition duration-500 origin-bottom-left transform rotate-45 translate-x-24 bg-cyan-400 opacity-30 group-hover:rotate-90 ease"></span>
             <span class="relative flex items-center gap-4 text-xs font-bold tracking-widest uppercase text-white">
               Connect on LinkedIn
@@ -261,7 +265,6 @@
     const darkIcon = document.getElementById('theme-toggle-dark-icon');
     const lightIcon = document.getElementById('theme-toggle-light-icon');
 
-    // Check local storage or system preference on load
     if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       document.documentElement.classList.add('dark');
     } else {
@@ -269,11 +272,9 @@
     }
 
     themeToggleBtn.addEventListener('click', function() {
-      // Toggle icons
       darkIcon.classList.toggle('hidden');
       lightIcon.classList.toggle('hidden');
 
-      // Toggle theme in DOM and LocalStorage
       if (localStorage.getItem('color-theme')) {
         if (localStorage.getItem('color-theme') === 'light') {
           document.documentElement.classList.add('dark');
