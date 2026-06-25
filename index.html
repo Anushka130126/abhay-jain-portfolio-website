@@ -41,10 +41,11 @@
       animation: breathe 12s ease-in-out infinite;
     }
 
+    /* Upgraded reveal with a smooth, premium bounce effect */
     .reveal {
       opacity: 0;
       transform: translateY(40px) scale(0.98);
-      transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: all 1.2s cubic-bezier(0.25, 1.3, 0.5, 1);
     }
     .reveal.active {
       opacity: 1;
@@ -52,17 +53,20 @@
     }
     .delay-100 { transition-delay: 100ms; }
     .delay-200 { transition-delay: 200ms; }
+
+    /* CSS Alpha Mask to create the seamless image blend */
+    .mask-edges {
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+      mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+    }
   </style>
 </head>
 <body class="antialiased bg-[#FAFAFA] text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-700 relative min-h-screen">
 
-  <!-- Dynamic Animated Background (Elevated Light Mode & Purple Dark Mode) -->
+  <!-- Dynamic Animated Background -->
   <div class="fixed inset-0 z-[-1] overflow-hidden bg-[#FAFAFA] dark:bg-slate-950 transition-colors duration-700">
-    <!-- Orb 1: Rich Violet/Cyan -->
     <div class="absolute top-[-10%] left-[-10%] w-[80%] lg:w-[60%] h-[60%] rounded-full bg-violet-300/50 dark:bg-cyan-900/40 blur-[90px] lg:blur-[100px] animate-breathe transition-colors duration-700"></div>
-    <!-- Orb 2: Deep Sky Blue/Indigo -->
     <div class="absolute bottom-[-10%] right-[-10%] w-[80%] lg:w-[60%] h-[60%] rounded-full bg-sky-300/50 dark:bg-indigo-900/40 blur-[90px] lg:blur-[100px] animate-breathe transition-colors duration-700" style="animation-delay: -6s;"></div>
-    <!-- Orb 3: Icy Indigo/Deep Violet -->
     <div class="absolute top-[20%] right-[20%] w-[40%] h-[40%] rounded-full bg-indigo-300/40 dark:bg-violet-900/20 blur-[90px] animate-breathe transition-colors duration-700" style="animation-delay: -3s;"></div>
   </div>
 
@@ -86,10 +90,10 @@
     </div>
   </header>
 
-  <main class="mx-auto max-w-6xl px-4 md:px-6 py-12 lg:py-32 space-y-24 lg:space-y-32">
+  <main class="mx-auto max-w-6xl px-4 md:px-6 py-12 lg:py-24 space-y-24 lg:space-y-32">
 
     <!-- Section 1: Hero -->
-    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center reveal active">
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center reveal active pt-8">
       <div class="lg:col-span-8 space-y-6 lg:space-y-8 order-2 lg:order-1 text-center lg:text-left">
         <h1 class="font-serif text-5xl sm:text-6xl lg:text-8xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-slate-600 to-slate-800 dark:from-white dark:via-cyan-200 dark:to-indigo-400 animate-text-gradient leading-tight pb-2 transition-all duration-700">
           Abhay Jain
@@ -107,7 +111,8 @@
     </section>
 
     <!-- Section 2: Current Focus Area -->
-    <section id="focus" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 pt-16 reveal transition-colors duration-700">
+    <!-- Added scroll-mt-32 to offset the sticky header -->
+    <section id="focus" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 pt-16 border-t border-slate-200 dark:border-white/10 scroll-mt-32 reveal transition-colors duration-700">
       <div class="lg:col-span-4">
         <h2 class="font-serif text-3xl lg:text-4xl tracking-wide text-slate-900 dark:text-white transition-colors duration-700">Current Focus</h2>
       </div>
@@ -136,7 +141,7 @@
     </section>
 
     <!-- Section 3: Pedigree & Affiliations -->
-    <section id="pedigree" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 pt-16 reveal transition-colors duration-700">
+    <section id="pedigree" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 pt-16 scroll-mt-32 reveal transition-colors duration-700">
       <div class="lg:col-span-4">
         <h2 class="font-serif text-3xl lg:text-4xl tracking-wide text-slate-900 dark:text-white transition-colors duration-700">Pedigree</h2>
       </div>
@@ -172,7 +177,7 @@
     </section>
 
     <!-- Section 4: Emerging Tech & Innovation -->
-    <section id="innovation" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 pt-16 reveal transition-colors duration-700">
+    <section id="innovation" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 pt-16 scroll-mt-32 reveal transition-colors duration-700">
       <div class="lg:col-span-4">
         <h2 class="font-serif text-3xl lg:text-4xl tracking-wide text-slate-900 dark:text-white transition-colors duration-700">Emerging Tech</h2>
       </div>
@@ -201,7 +206,7 @@
     </section>
 
     <!-- Section 5: Track Record -->
-    <section id="track-record" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 pt-16 reveal transition-colors duration-700">
+    <section id="track-record" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 pt-16 scroll-mt-32 reveal transition-colors duration-700">
       <div class="lg:col-span-4">
         <h2 class="font-serif text-3xl lg:text-4xl tracking-wide text-slate-900 dark:text-white transition-colors duration-700">Track Record</h2>
       </div>
@@ -238,18 +243,18 @@
 
   </main>
 
-  <!-- Wide Cinematic Contact Banner (Shifted to 80% Center) -->
-  <section id="contact" class="relative max-w-7xl mx-auto mb-12 sm:mb-24 rounded-[2rem] overflow-hidden reveal transition-colors duration-700 shadow-2xl">
+  <!-- Full-Bleed Seamless Cinematic Contact Banner -->
+  <section id="contact" class="relative w-full py-24 md:py-32 scroll-mt-28 reveal transition-colors duration-700 overflow-hidden">
     
-    <div class="absolute inset-0 z-0">
-      <!-- Image shifted to focus on the right side where APJ Kalam is seated -->
-      <img src="Abhay_Jain_banner_pic.jpg" class="w-full h-full object-cover object-[80%_center] opacity-60 dark:opacity-40 mix-blend-multiply dark:mix-blend-luminosity grayscale" alt="Context: Presenting technical frameworks alongside Dr. A.P.J. Abdul Kalam.">
-      <div class="absolute inset-0 bg-gradient-to-t from-white/95 via-white/80 to-transparent dark:from-slate-950/95 dark:via-slate-900/80 dark:to-transparent transition-colors duration-700"></div>
-      <div class="absolute inset-0 backdrop-blur-md dark:backdrop-blur-xl"></div>
+    <!-- Seamless Alpha Mask over the image -->
+    <div class="absolute inset-0 z-0 mask-edges pointer-events-none">
+      <img src="Abhay_Jain_banner_pic.jpg" class="w-full h-full object-cover object-[80%_center] opacity-60 dark:opacity-30 grayscale" alt="Context: Presenting technical frameworks alongside Dr. A.P.J. Abdul Kalam.">
+      <!-- Cool blue overlay to neutralize yellow hues in the grayscale image -->
+      <div class="absolute inset-0 bg-cyan-600/30 mix-blend-color"></div>
     </div>
 
-    <!-- Content -->
-    <div class="relative z-10 px-6 py-24 md:py-32 text-center space-y-8">
+    <!-- Content Wrapper (Constrained to match the rest of the site) -->
+    <div class="relative z-10 max-w-6xl mx-auto px-4 md:px-6 text-center space-y-8">
       <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl tracking-wide text-slate-900 dark:text-white transition-colors duration-700">Inbound</h2>
       <p class="text-lg md:text-xl font-light text-slate-700 dark:text-slate-300 leading-relaxed max-w-2xl mx-auto transition-colors duration-700">
         Open to precise conversations regarding advisory positions, semiconductor ecosystem strategies, or institutional alignment.
@@ -270,7 +275,7 @@
     </div>
   </section>
 
-  <footer class="pb-8 text-center text-[10px] md:text-xs tracking-widest uppercase text-slate-400 dark:text-slate-500 transition-colors duration-700">
+  <footer class="pb-12 text-center text-[10px] md:text-xs tracking-widest uppercase text-slate-400 dark:text-slate-500 transition-colors duration-700">
     &copy; 2026 Abhay Jain. Executive Positioning.
   </footer>
 
