@@ -34,7 +34,7 @@
       <a href="index.html" class="font-serif text-2xl md:text-3xl tracking-wide text-slate-900 dark:text-white hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors duration-300">Abhay Jain</a>
       
       <div class="flex items-center gap-6 lg:gap-8">
-        <nav class="flex items-center gap-4 lg:gap-8 text-[10px] md:text-[11px] font-semibold tracking-[0.15em] lg:tracking-[0.2em] uppercase text-slate-500 dark:text-slate-300">
+        <nav class="flex items-center gap-4 lg:gap-8 text-[10px] md:text-[11px] font-semibold tracking-[0.15em] lg:tracking-[0.2em] uppercase text-slate-500 dark:text-slate-300 hidden md:flex">
           <a href="index.html" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors duration-300">Home</a>
           <a href="about.html" class="text-slate-900 dark:text-white hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors duration-300">About Me</a>
           <a href="index.html#track-record" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors duration-300">Track Record</a>
@@ -51,54 +51,121 @@
 
   <main class="mx-auto max-w-6xl px-4 md:px-6 py-12 lg:py-24 space-y-24 lg:space-y-32">
 
-    <!-- Global Narrative -->
-    <section class="pt-8 scroll-mt-12 transition-colors duration-700">
-      <div class="max-w-4xl mx-auto text-center space-y-8">
-        <h1 class="font-serif text-4xl lg:text-6xl tracking-wide text-slate-900 dark:text-white transition-colors duration-700 reveal active">Hi! I am Abhay.</h1>
+    <!-- Formal Executive Profile Section with Image -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center pt-8 scroll-mt-12 transition-colors duration-700">
+      <div class="lg:col-span-8 space-y-6 lg:space-y-8 order-2 lg:order-1 text-center lg:text-left">
+        <h1 class="font-serif text-4xl lg:text-6xl tracking-wide text-slate-900 dark:text-white transition-colors duration-700 reveal active">Executive Profile</h1>
         <p class="text-xl lg:text-2xl text-slate-600 dark:text-slate-300 font-light leading-relaxed transition-colors duration-700 reveal active delay-75">
-          A global professional with experience in management consulting, energy sustainability, tech, and manufacturing.
+          A global professional with comprehensive expertise in management consulting, energy sustainability, deep-tech, and manufacturing operations.
         </p>
         <p class="text-base lg:text-lg text-slate-500 dark:text-slate-400 font-light leading-relaxed transition-colors duration-700 reveal active delay-150">
-          I originally hail from the foothills of the Himalayan region in India, lived in Japan for 4 years, and then moved to the USA to pursue higher education. I enjoy table tennis, pool, golf, and road trips. I also have a deep passion for dancing and have performed in multiple cultural events.
+          With early roots in the Himalayan region of India, my career has spanned international markets—including a four-year tenure in Japan—before advancing to the United States for higher education. Beyond professional operations and full product lifecycles, I maintain a strong commitment to cultural and athletic pursuits, including competitive table tennis, golf, and international dance performances.
         </p>
       </div>
-    </section>
-
-    <!-- Pedigree & Affiliations with Logos -->
-    <section class="scroll-mt-12 transition-colors duration-700">
-      <div class="space-y-16">
-        <h2 class="font-serif text-3xl lg:text-4xl tracking-wide text-slate-900 dark:text-white transition-colors duration-700 reveal">Experience & Education</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
-          
-          <div class="group p-6 lg:p-8 rounded-2xl bg-white/60 dark:bg-slate-900/40 backdrop-blur-md border border-slate-300 dark:border-slate-700 hover:bg-white/90 dark:hover:border-cyan-500/50 shadow-sm dark:shadow-none hover:shadow-md dark:hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal delay-75">
-            <img src="mckinsey_logo.png" alt="McKinsey & Company" class="h-10 w-auto mb-6 object-contain opacity-80 dark:opacity-100 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'">
-            <h3 class="font-serif text-2xl lg:text-3xl tracking-wide text-slate-900 dark:text-white transition-colors duration-500 group-hover:text-cyan-600 dark:group-hover:text-cyan-300">McKinsey & Co.</h3>
-            <p class="text-base text-slate-600 dark:text-slate-300 font-light pt-3 transition-colors duration-700">Engagement Manager</p>
-          </div>
-          
-          <div class="group p-6 lg:p-8 rounded-2xl bg-white/60 dark:bg-slate-900/40 backdrop-blur-md border border-slate-300 dark:border-slate-700 hover:bg-white/90 dark:hover:border-cyan-500/50 shadow-sm dark:shadow-none hover:shadow-md dark:hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal delay-150">
-            <img src="mitsubishi_logo.png" alt="Mitsubishi Heavy Industries" class="h-10 w-auto mb-6 object-contain opacity-80 dark:opacity-100 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'">
-            <h3 class="font-serif text-2xl lg:text-3xl tracking-wide text-slate-900 dark:text-white transition-colors duration-500 group-hover:text-cyan-600 dark:group-hover:text-cyan-300">Mitsubishi Heavy</h3>
-            <p class="text-base text-slate-600 dark:text-slate-300 font-light pt-3 transition-colors duration-700">Sales and Marketing Executive; Compressor & steam</p>
-          </div>
-
-          <div class="group p-6 lg:p-8 rounded-2xl bg-white/60 dark:bg-slate-900/40 backdrop-blur-md border border-slate-300 dark:border-slate-700 hover:bg-white/90 dark:hover:border-cyan-500/50 shadow-sm dark:shadow-none hover:shadow-md dark:hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal delay-75">
-            <img src="stanford_logo.png" alt="Stanford University" class="h-10 w-auto mb-6 object-contain opacity-80 dark:opacity-100 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'">
-            <h3 class="font-serif text-2xl lg:text-3xl tracking-wide text-slate-900 dark:text-white transition-colors duration-500 group-hover:text-cyan-600 dark:group-hover:text-cyan-300">Stanford University</h3>
-            <p class="text-base text-slate-600 dark:text-slate-300 font-light pt-3 transition-colors duration-700">MBA & MS in environment and resources</p>
-          </div>
-
-          <div class="group p-6 lg:p-8 rounded-2xl bg-white/60 dark:bg-slate-900/40 backdrop-blur-md border border-slate-300 dark:border-slate-700 hover:bg-white/90 dark:hover:border-cyan-500/50 shadow-sm dark:shadow-none hover:shadow-md dark:hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal delay-150">
-            <img src="iit_logo.png" alt="IIT Kanpur" class="h-10 w-auto mb-6 object-contain opacity-80 dark:opacity-100 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'">
-            <h3 class="font-serif text-2xl lg:text-3xl tracking-wide text-slate-900 dark:text-white transition-colors duration-500 group-hover:text-cyan-600 dark:group-hover:text-cyan-300">IIT Kanpur</h3>
-            <p class="text-base text-slate-600 dark:text-slate-300 font-light pt-3 transition-colors duration-700">B.Tech, Materials and Metallurgical Engineering</p>
-          </div>
-
+      <div class="lg:col-span-4 flex justify-center lg:justify-end order-1 lg:order-2">
+        <div class="relative group cursor-pointer reveal active delay-200">
+          <div class="absolute inset-0 bg-white/50 dark:bg-cyan-500/30 rounded-lg blur-2xl group-hover:bg-white/80 dark:group-hover:bg-indigo-400/50 transition-all duration-700"></div>
+          <img src="Abhay_Jain_profile_pic.jpg" alt="Abhay Jain" class="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-72 lg:h-72 object-cover shadow-[0_20px_40px_rgba(0,0,0,0.08)] dark:shadow-[0_0_40px_rgba(0,0,0,0.5)] border border-white/80 dark:border-white/20 rounded-lg group-hover:-translate-y-3 group-hover:scale-[1.02] transition-all duration-700 ease-out">
         </div>
       </div>
     </section>
 
-    <!-- Unified UI: Publications & Awards styled exactly like the Track Record cards -->
+    <!-- Pedigree & Affiliations with Logos -->
+    <section id="pedigree" class="scroll-mt-12 transition-colors duration-700">
+      <div class="space-y-16">
+        
+        <!-- Work Experience -->
+        <div class="space-y-8">
+          <h2 class="font-serif text-3xl lg:text-4xl tracking-wide text-slate-900 dark:text-white transition-colors duration-700 reveal">Work Experience</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            
+            <div class="group p-6 lg:p-8 rounded-2xl bg-white/60 dark:bg-slate-900/40 backdrop-blur-md border border-slate-300 dark:border-slate-700 hover:bg-white/90 dark:hover:border-cyan-500/50 shadow-sm dark:shadow-none hover:shadow-md dark:hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal">
+              <div class="h-12 flex items-center justify-start mb-6">
+                <img src="https://logo.clearbit.com/mckinsey.com" alt="McKinsey & Co" class="max-h-full max-w-full object-contain opacity-80 dark:opacity-100 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'">
+              </div>
+              <h3 class="font-serif text-xl lg:text-2xl tracking-wide text-slate-900 dark:text-white transition-colors duration-500 group-hover:text-cyan-600 dark:group-hover:text-cyan-300">McKinsey & Co.</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-400 font-light pt-2 transition-colors duration-700">Consultant</p>
+            </div>
+
+            <div class="group p-6 lg:p-8 rounded-2xl bg-white/60 dark:bg-slate-900/40 backdrop-blur-md border border-slate-300 dark:border-slate-700 hover:bg-white/90 dark:hover:border-cyan-500/50 shadow-sm dark:shadow-none hover:shadow-md dark:hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal delay-75">
+              <div class="h-12 flex items-center justify-start mb-6">
+                <img src="https://logo.clearbit.com/mhi.com" alt="Mitsubishi Heavy Industries" class="max-h-full max-w-full object-contain opacity-80 dark:opacity-100 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'">
+              </div>
+              <h3 class="font-serif text-xl lg:text-2xl tracking-wide text-slate-900 dark:text-white transition-colors duration-500 group-hover:text-cyan-600 dark:group-hover:text-cyan-300">Mitsubishi Heavy</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-400 font-light pt-2 transition-colors duration-700">Sales and Marketing Executive; Compressor & steam turbine Engineer</p>
+            </div>
+
+            <div class="group p-6 lg:p-8 rounded-2xl bg-white/60 dark:bg-slate-900/40 backdrop-blur-md border border-slate-300 dark:border-slate-700 hover:bg-white/90 dark:hover:border-cyan-500/50 shadow-sm dark:shadow-none hover:shadow-md dark:hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal delay-150">
+              <div class="h-12 flex items-center justify-start mb-6">
+                <img src="https://logo.clearbit.com/nexteraenergy.com" alt="NextEra Energy" class="max-h-full max-w-full object-contain opacity-80 dark:opacity-100 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'">
+              </div>
+              <h3 class="font-serif text-xl lg:text-2xl tracking-wide text-slate-900 dark:text-white transition-colors duration-500 group-hover:text-cyan-600 dark:group-hover:text-cyan-300">NextEra Energy</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-400 font-light pt-2 transition-colors duration-700">MBA intern, Renewable energy innovation and Strategy team</p>
+            </div>
+
+            <div class="group p-6 lg:p-8 rounded-2xl bg-white/60 dark:bg-slate-900/40 backdrop-blur-md border border-slate-300 dark:border-slate-700 hover:bg-white/90 dark:hover:border-cyan-500/50 shadow-sm dark:shadow-none hover:shadow-md dark:hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal">
+              <div class="h-12 flex items-center justify-start mb-6">
+                <img src="https://logo.clearbit.com/auto-grid.com" alt="AutoGrid" class="max-h-full max-w-full object-contain opacity-80 dark:opacity-100 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'">
+              </div>
+              <h3 class="font-serif text-xl lg:text-2xl tracking-wide text-slate-900 dark:text-white transition-colors duration-500 group-hover:text-cyan-600 dark:group-hover:text-cyan-300">AutoGrid</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-400 font-light pt-2 transition-colors duration-700">Summer Intern, Solutions and data science</p>
+            </div>
+
+            <div class="group p-6 lg:p-8 rounded-2xl bg-white/60 dark:bg-slate-900/40 backdrop-blur-md border border-slate-300 dark:border-slate-700 hover:bg-white/90 dark:hover:border-cyan-500/50 shadow-sm dark:shadow-none hover:shadow-md dark:hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal delay-75">
+              <div class="h-12 flex items-center justify-start mb-6">
+                <img src="https://logo.clearbit.com/sparkz.energy" alt="Sparkz Inc." class="max-h-full max-w-full object-contain opacity-80 dark:opacity-100 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'">
+              </div>
+              <h3 class="font-serif text-xl lg:text-2xl tracking-wide text-slate-900 dark:text-white transition-colors duration-500 group-hover:text-cyan-600 dark:group-hover:text-cyan-300">Sparkz Inc.</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-400 font-light pt-2 transition-colors duration-700">Business and Product Development Manager (Intern)</p>
+            </div>
+
+            <div class="group p-6 lg:p-8 rounded-2xl bg-white/60 dark:bg-slate-900/40 backdrop-blur-md border border-slate-300 dark:border-slate-700 hover:bg-white/90 dark:hover:border-cyan-500/50 shadow-sm dark:shadow-none hover:shadow-md dark:hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal delay-150">
+              <div class="h-12 flex items-center justify-start mb-6">
+                <img src="https://logo.clearbit.com/averda.com" alt="Averda" class="max-h-full max-w-full object-contain opacity-80 dark:opacity-100 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'">
+              </div>
+              <h3 class="font-serif text-xl lg:text-2xl tracking-wide text-slate-900 dark:text-white transition-colors duration-500 group-hover:text-cyan-600 dark:group-hover:text-cyan-300">Averda</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-400 font-light pt-2 transition-colors duration-700">Operations intern, COO office</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="space-y-8 pt-8">
+          <h2 class="font-serif text-3xl lg:text-4xl tracking-wide text-slate-900 dark:text-white transition-colors duration-700 reveal">Education</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            
+            <div class="group p-6 lg:p-8 rounded-2xl bg-white/60 dark:bg-slate-900/40 backdrop-blur-md border border-slate-300 dark:border-slate-700 hover:bg-white/90 dark:hover:border-cyan-500/50 shadow-sm dark:shadow-none hover:shadow-md dark:hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal">
+              <div class="h-16 bg-white rounded-lg p-2 flex items-center justify-center mb-6 shadow-sm">
+                <img src="https://logo.clearbit.com/iitk.ac.in" alt="IIT Kanpur" class="max-h-full max-w-full object-contain transition-opacity" onerror="this.style.display='none'">
+              </div>
+              <h3 class="font-serif text-xl lg:text-2xl tracking-wide text-slate-900 dark:text-white transition-colors duration-500 group-hover:text-cyan-600 dark:group-hover:text-cyan-300">IIT Kanpur</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-400 font-light pt-2 transition-colors duration-700">B.Tech (Bachelors), Materials & metallurgical Engineering</p>
+            </div>
+
+            <div class="group p-6 lg:p-8 rounded-2xl bg-white/60 dark:bg-slate-900/40 backdrop-blur-md border border-slate-300 dark:border-slate-700 hover:bg-white/90 dark:hover:border-cyan-500/50 shadow-sm dark:shadow-none hover:shadow-md dark:hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal delay-75">
+              <div class="h-16 flex items-center justify-start mb-6">
+                <img src="https://logo.clearbit.com/stanford.edu" alt="Stanford University" class="max-h-full max-w-full object-contain opacity-80 dark:opacity-100 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'">
+              </div>
+              <h3 class="font-serif text-xl lg:text-2xl tracking-wide text-slate-900 dark:text-white transition-colors duration-500 group-hover:text-cyan-600 dark:group-hover:text-cyan-300">Stanford University</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-400 font-light pt-2 transition-colors duration-700">MBA, Graduate School of Business</p>
+            </div>
+
+            <div class="group p-6 lg:p-8 rounded-2xl bg-white/60 dark:bg-slate-900/40 backdrop-blur-md border border-slate-300 dark:border-slate-700 hover:bg-white/90 dark:hover:border-cyan-500/50 shadow-sm dark:shadow-none hover:shadow-md dark:hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal delay-150">
+              <div class="h-16 flex items-center justify-start mb-6">
+                <img src="https://logo.clearbit.com/stanford.edu" alt="Stanford University" class="max-h-full max-w-full object-contain opacity-80 dark:opacity-100 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'">
+              </div>
+              <h3 class="font-serif text-xl lg:text-2xl tracking-wide text-slate-900 dark:text-white transition-colors duration-500 group-hover:text-cyan-600 dark:group-hover:text-cyan-300">Stanford University</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-400 font-light pt-2 transition-colors duration-700">MS in environment and resources, School of Earth</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Unified UI: Publications & Awards styled exactly like the Pedigree cards -->
     <section id="honors" class="scroll-mt-12 transition-colors duration-700">
       <div class="space-y-16">
         <h2 class="font-serif text-3xl lg:text-4xl tracking-wide text-slate-900 dark:text-white transition-colors duration-700 reveal">Honors & Published Work</h2>
@@ -108,19 +175,19 @@
           <h4 class="text-xs font-bold tracking-widest uppercase text-slate-500 dark:text-slate-400 reveal delay-75">Publications & Patents</h4>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
             <a href="#" class="block group p-6 lg:p-8 rounded-2xl bg-white/60 dark:bg-slate-900/40 backdrop-blur-md border border-slate-300 dark:border-slate-700 hover:bg-white/90 dark:hover:border-cyan-500/50 shadow-sm dark:shadow-none hover:shadow-md dark:hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 reveal delay-100">
-              <h5 class="text-lg font-medium text-slate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">Global surveys of consumer sentiment during the coronavirus crisis</h5>
+              <h5 class="font-serif text-xl lg:text-2xl tracking-wide text-slate-900 dark:text-white transition-colors duration-500 group-hover:text-cyan-600 dark:group-hover:text-cyan-300">Global surveys of consumer sentiment during the coronavirus crisis</h5>
               <p class="text-sm text-slate-500 dark:text-slate-400 mt-2">McKinsey & Company, 2020</p>
             </a>
             <a href="#" class="block group p-6 lg:p-8 rounded-2xl bg-white/60 dark:bg-slate-900/40 backdrop-blur-md border border-slate-300 dark:border-slate-700 hover:bg-white/90 dark:hover:border-cyan-500/50 shadow-sm dark:shadow-none hover:shadow-md dark:hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 reveal delay-150">
-              <h5 class="text-lg font-medium text-slate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">Low Hanging Fruit: VC Investment Trends in Food Waste</h5>
+              <h5 class="font-serif text-xl lg:text-2xl tracking-wide text-slate-900 dark:text-white transition-colors duration-500 group-hover:text-cyan-600 dark:group-hover:text-cyan-300">Low Hanging Fruit: VC Investment Trends in Food Waste</h5>
               <p class="text-sm text-slate-500 dark:text-slate-400 mt-2">Stanford EIPER, 2020</p>
             </a>
             <a href="#" class="block group p-6 lg:p-8 rounded-2xl bg-white/60 dark:bg-slate-900/40 backdrop-blur-md border border-slate-300 dark:border-slate-700 hover:bg-white/90 dark:hover:border-cyan-500/50 shadow-sm dark:shadow-none hover:shadow-md dark:hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 reveal delay-100">
-              <h5 class="text-lg font-medium text-slate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">Emergency Shutoff Device and System Patent</h5>
+              <h5 class="font-serif text-xl lg:text-2xl tracking-wide text-slate-900 dark:text-white transition-colors duration-500 group-hover:text-cyan-600 dark:group-hover:text-cyan-300">Emergency Shutoff Device and System Patent</h5>
               <p class="text-sm text-slate-500 dark:text-slate-400 mt-2">Mitsubishi Heavy Industries, 2016</p>
             </a>
             <a href="#" class="block group p-6 lg:p-8 rounded-2xl bg-white/60 dark:bg-slate-900/40 backdrop-blur-md border border-slate-300 dark:border-slate-700 hover:bg-white/90 dark:hover:border-cyan-500/50 shadow-sm dark:shadow-none hover:shadow-md dark:hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 reveal delay-150">
-              <h5 class="text-lg font-medium text-slate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">The clock stops ticking, Vox-populi</h5>
+              <h5 class="font-serif text-xl lg:text-2xl tracking-wide text-slate-900 dark:text-white transition-colors duration-500 group-hover:text-cyan-600 dark:group-hover:text-cyan-300">The clock stops ticking, Vox-populi</h5>
               <p class="text-sm text-slate-500 dark:text-slate-400 mt-2">IIT Kanpur, 2016</p>
             </a>
           </div>
@@ -131,19 +198,19 @@
           <h4 class="text-xs font-bold tracking-widest uppercase text-slate-500 dark:text-slate-400 reveal delay-75">Awards & Fellowships</h4>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             <div class="group p-6 rounded-2xl bg-white/60 dark:bg-slate-900/40 backdrop-blur-md border border-slate-300 dark:border-slate-700 hover:bg-white/90 dark:hover:border-cyan-500/50 shadow-sm dark:shadow-none hover:shadow-md dark:hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal">
-              <p class="text-sm font-medium text-slate-900 dark:text-white">K.C. Mahindra Scholarship</p>
+              <h5 class="font-serif text-xl lg:text-2xl tracking-wide text-slate-900 dark:text-white transition-colors duration-500 group-hover:text-cyan-600 dark:group-hover:text-cyan-300">K.C. Mahindra Scholarship</h5>
               <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">For Graduate Studies, 2017</p>
             </div>
             <div class="group p-6 rounded-2xl bg-white/60 dark:bg-slate-900/40 backdrop-blur-md border border-slate-300 dark:border-slate-700 hover:bg-white/90 dark:hover:border-cyan-500/50 shadow-sm dark:shadow-none hover:shadow-md dark:hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal delay-75">
-              <p class="text-sm font-medium text-slate-900 dark:text-white">J.N. Tata Scholarship</p>
+              <h5 class="font-serif text-xl lg:text-2xl tracking-wide text-slate-900 dark:text-white transition-colors duration-500 group-hover:text-cyan-600 dark:group-hover:text-cyan-300">J.N. Tata Scholarship</h5>
               <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">For Graduate Studies, 2017</p>
             </div>
             <div class="group p-6 rounded-2xl bg-white/60 dark:bg-slate-900/40 backdrop-blur-md border border-slate-300 dark:border-slate-700 hover:bg-white/90 dark:hover:border-cyan-500/50 shadow-sm dark:shadow-none hover:shadow-md dark:hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal delay-100">
-              <p class="text-sm font-medium text-slate-900 dark:text-white">Social Management Immersion</p>
+              <h5 class="font-serif text-xl lg:text-2xl tracking-wide text-slate-900 dark:text-white transition-colors duration-500 group-hover:text-cyan-600 dark:group-hover:text-cyan-300">Social Management Immersion</h5>
               <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">Fellowship, Stanford, 2018</p>
             </div>
             <div class="group p-6 rounded-2xl bg-white/60 dark:bg-slate-900/40 backdrop-blur-md border border-slate-300 dark:border-slate-700 hover:bg-white/90 dark:hover:border-cyan-500/50 shadow-sm dark:shadow-none hover:shadow-md dark:hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal delay-150">
-              <p class="text-sm font-medium text-slate-900 dark:text-white">InSite Fellowship</p>
+              <h5 class="font-serif text-xl lg:text-2xl tracking-wide text-slate-900 dark:text-white transition-colors duration-500 group-hover:text-cyan-600 dark:group-hover:text-cyan-300">InSite Fellowship</h5>
               <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">2019</p>
             </div>
           </div>
@@ -154,6 +221,7 @@
 
   </main>
 
+  <!-- Footer with Subscription -->
   <footer class="border-t border-slate-300/60 dark:border-white/10 bg-white/30 dark:bg-slate-950/50 backdrop-blur-md py-12 transition-colors duration-700 reveal">
     <div class="max-w-6xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
       <div class="flex items-center justify-center md:justify-start gap-8">
