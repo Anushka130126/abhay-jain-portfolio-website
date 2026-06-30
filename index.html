@@ -52,16 +52,133 @@
 
   <main class="mx-auto max-w-6xl px-4 md:px-6 py-12 lg:py-24 space-y-24 lg:space-y-32">
     
-    <!-- Hero Section -->
-    <section class="flex flex-col items-center justify-center text-center space-y-8 reveal active">
-      <div class="relative group cursor-pointer">
-        <div class="absolute inset-0 bg-white/50 dark:bg-cyan-500/30 rounded-lg blur-2xl transition-all duration-700"></div>
-        <img src="Abhay_Jain_profile_pic.jpg" alt="Abhay Jain" class="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-72 lg:h-72 object-cover rounded-lg border border-white/80 dark:border-white/20 shadow-lg">
+    <!-- Hero Section (Restored 2-column layout) -->
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center reveal active">
+      <div class="space-y-6 order-2 lg:order-1 text-center lg:text-left">
+        <h1 class="font-serif text-5xl lg:text-7xl tracking-wide text-slate-900 dark:text-white">Abhay Jain</h1>
+        <p class="text-lg md:text-2xl text-slate-600 dark:text-slate-300 font-light leading-relaxed">
+          Business Division Leader at Renesas Electronics. Bridging technology, localized product strategy, and cross-functional operations.
+        </p>
       </div>
-      <h1 class="font-serif text-5xl lg:text-7xl tracking-wide text-slate-900 dark:text-white">Abhay Jain</h1>
-      <p class="text-lg md:text-2xl text-slate-600 dark:text-slate-300 font-light max-w-3xl leading-relaxed">
-        Business Division Leader at Renesas Electronics. Bridging technology, localized product strategy, and cross-functional operations.
-      </p>
+      <div class="flex justify-center lg:justify-end order-1 lg:order-2">
+        <div class="relative group cursor-pointer">
+          <div class="absolute inset-0 bg-white/50 dark:bg-cyan-500/30 rounded-lg blur-2xl transition-all duration-700"></div>
+          <img src="Abhay_Jain_profile_pic.jpg" alt="Abhay Jain" class="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 object-cover rounded-lg border border-white/80 dark:border-white/20 shadow-lg">
+        </div>
+      </div>
+    </section>
+
+    <hr class="border-slate-300/60 dark:border-white/10 reveal">
+
+    <!-- Current Focus Section (Restored) -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 reveal">
+      <div class="lg:col-span-4">
+        <h2 class="font-serif text-3xl tracking-wide text-slate-900 dark:text-white sticky top-28">Current Focus</h2>
+      </div>
+      <div class="lg:col-span-8 space-y-8">
+        <div class="flex items-start gap-4">
+          <div class="w-4 h-[2px] bg-cyan-600 dark:bg-cyan-400 mt-3 shrink-0"></div>
+          <p class="text-base md:text-lg text-slate-600 dark:text-slate-300 font-light leading-relaxed">
+            Leading Renesas' India-for-India business unit, managing power management, sensing, and embedded analog semiconductor portfolios.
+          </p>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-4 h-[2px] bg-cyan-600 dark:bg-cyan-400 mt-3 shrink-0"></div>
+          <p class="text-base md:text-lg text-slate-600 dark:text-slate-300 font-light leading-relaxed">
+            Shaping localized product roadmaps and accelerating market adoption across automotive, industrial, and energy segments.
+          </p>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-4 h-[2px] bg-cyan-600 dark:bg-cyan-400 mt-3 shrink-0"></div>
+          <p class="text-base md:text-lg text-slate-600 dark:text-slate-300 font-light leading-relaxed">
+            Developing critical ecosystem partnerships to support sustainable scaling within India's rapidly evolving electronics hardware economy.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Track Record Section (Restored) -->
+    <section id="track-record" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 scroll-mt-24 reveal">
+      <div class="lg:col-span-4">
+        <h2 class="font-serif text-3xl tracking-wide text-slate-900 dark:text-white sticky top-28">Track Record</h2>
+      </div>
+      <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div class="p-8 rounded-2xl bg-white/60 dark:bg-slate-900/40 border border-slate-300 dark:border-slate-700">
+          <h3 class="font-serif text-4xl text-slate-900 dark:text-white">$3B – $30B</h3>
+          <p class="text-[10px] font-bold tracking-widest uppercase text-cyan-600 dark:text-cyan-400 mt-2 mb-4">Portfolio Management</p>
+          <p class="text-sm text-slate-600 dark:text-slate-400 font-light">Executed go-to-market strategies, sales playbooks, and KPI architectures across global business structures.</p>
+        </div>
+        <div class="p-8 rounded-2xl bg-white/60 dark:bg-slate-900/40 border border-slate-300 dark:border-slate-700">
+          <h3 class="font-serif text-4xl text-slate-900 dark:text-white">+15% to 20%</h3>
+          <p class="text-[10px] font-bold tracking-widest uppercase text-cyan-600 dark:text-cyan-400 mt-2 mb-4">Operational Efficiency</p>
+          <p class="text-sm text-slate-600 dark:text-slate-400 font-light">Built central program networks governing resource deployment, outsourcing, and analytics automation.</p>
+        </div>
+        <div class="p-8 rounded-2xl bg-white/60 dark:bg-slate-900/40 border border-slate-300 dark:border-slate-700">
+          <h3 class="font-serif text-4xl text-slate-900 dark:text-white">~10% Growth</h3>
+          <p class="text-[10px] font-bold tracking-widest uppercase text-cyan-600 dark:text-cyan-400 mt-2 mb-4">Org Transformation</p>
+          <p class="text-sm text-slate-600 dark:text-slate-400 font-light">Led post-merger integration strategies and commercial growth pilots during tenure at McKinsey & Company.</p>
+        </div>
+        <div class="p-8 rounded-2xl bg-white/60 dark:bg-slate-900/40 border border-slate-300 dark:border-slate-700">
+          <h3 class="font-serif text-4xl text-slate-900 dark:text-white">Patented</h3>
+          <p class="text-[10px] font-bold tracking-widest uppercase text-cyan-600 dark:text-cyan-400 mt-2 mb-4">Deep-Tech Hardware</p>
+          <p class="text-sm text-slate-600 dark:text-slate-400 font-light">Co-authored emergency utility safety mechanics and published global industrial research at Mitsubishi Heavy Industries.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Direct Inquiry Form Section (Restored exactly to screenshot) -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 scroll-mt-24 reveal">
+      <div class="lg:col-span-4 space-y-4">
+        <h2 class="font-serif text-3xl tracking-wide text-slate-900 dark:text-white">Direct Inquiry</h2>
+        <p class="text-sm text-slate-600 dark:text-slate-400 font-light pr-4">
+          Have a new idea, want to discuss an opportunity, or share thoughts? Submit a request below.
+        </p>
+      </div>
+      
+      <div class="lg:col-span-8 p-8 rounded-2xl bg-white/60 dark:bg-slate-900/40 border border-slate-300 dark:border-slate-700">
+        <form id="inquiry-form" class="space-y-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="space-y-1">
+              <label class="text-[10px] font-bold tracking-widest uppercase text-slate-500 dark:text-slate-400">First Name</label>
+              <input type="text" name="first_name" required class="w-full bg-transparent border-0 border-b border-slate-300 dark:border-slate-600 px-0 py-2 text-sm text-slate-900 dark:text-white outline-none focus:ring-0 focus:border-cyan-600 dark:focus:border-cyan-400">
+            </div>
+            <div class="space-y-1">
+              <label class="text-[10px] font-bold tracking-widest uppercase text-slate-500 dark:text-slate-400">Last Name</label>
+              <input type="text" name="last_name" required class="w-full bg-transparent border-0 border-b border-slate-300 dark:border-slate-600 px-0 py-2 text-sm text-slate-900 dark:text-white outline-none focus:ring-0 focus:border-cyan-600 dark:focus:border-cyan-400">
+            </div>
+          </div>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="space-y-1">
+              <label class="text-[10px] font-bold tracking-widest uppercase text-slate-500 dark:text-slate-400">Your Email</label>
+              <input type="email" name="email" required class="w-full bg-transparent border-0 border-b border-slate-300 dark:border-slate-600 px-0 py-2 text-sm text-slate-900 dark:text-white outline-none focus:ring-0 focus:border-cyan-600 dark:focus:border-cyan-400">
+            </div>
+            <div class="space-y-1">
+              <label class="text-[10px] font-bold tracking-widest uppercase text-slate-500 dark:text-slate-400">Your Phone</label>
+              <input type="tel" name="phone" class="w-full bg-transparent border-0 border-b border-slate-300 dark:border-slate-600 px-0 py-2 text-sm text-slate-900 dark:text-white outline-none focus:ring-0 focus:border-cyan-600 dark:focus:border-cyan-400">
+            </div>
+          </div>
+
+          <div class="space-y-1">
+            <label class="text-[10px] font-bold tracking-widest uppercase text-slate-500 dark:text-slate-400">Email Subject</label>
+            <input type="text" name="subject" required class="w-full bg-transparent border-0 border-b border-slate-300 dark:border-slate-600 px-0 py-2 text-sm text-slate-900 dark:text-white outline-none focus:ring-0 focus:border-cyan-600 dark:focus:border-cyan-400">
+          </div>
+
+          <div class="space-y-1">
+            <label class="text-[10px] font-bold tracking-widest uppercase text-slate-500 dark:text-slate-400">Your Message</label>
+            <textarea name="message" required rows="2" class="w-full bg-transparent border-0 border-b border-slate-300 dark:border-slate-600 px-0 py-2 text-sm text-slate-900 dark:text-white outline-none focus:ring-0 focus:border-cyan-600 dark:focus:border-cyan-400 resize-none"></textarea>
+          </div>
+
+          <div class="flex items-start gap-3 pt-2">
+            <input type="checkbox" required class="mt-1">
+            <span class="text-[10px] text-slate-500 dark:text-slate-400">By checking this box, you are granting permission to email you.</span>
+          </div>
+
+          <div class="pt-4">
+            <button type="submit" class="px-8 py-3 bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-[10px] font-bold uppercase tracking-widest rounded-full hover:bg-cyan-600 dark:hover:bg-cyan-400 transition-colors">Send Message</button>
+          </div>
+        </form>
+      </div>
     </section>
 
     <!-- Inbound Section (Mobile background fix applied) -->
@@ -74,20 +191,8 @@
         <p class="text-lg md:text-2xl text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
           Open to precise conversations regarding advisory positions, semiconductor ecosystem strategies, or institutional alignment.
         </p>
-        
-        <!-- Inquiry Form for Database -->
-        <form id="inquiry-form" class="mt-8 space-y-4 max-w-md mx-auto text-left">
-          <div class="grid grid-cols-2 gap-4">
-            <input type="text" name="first_name" placeholder="First Name" required class="w-full bg-white/50 dark:bg-slate-900/50 border border-slate-300 dark:border-slate-700 rounded-lg px-4 py-3 text-sm outline-none focus:border-cyan-500">
-            <input type="text" name="last_name" placeholder="Last Name" required class="w-full bg-white/50 dark:bg-slate-900/50 border border-slate-300 dark:border-slate-700 rounded-lg px-4 py-3 text-sm outline-none focus:border-cyan-500">
-          </div>
-          <input type="email" name="email" placeholder="Email Address" required class="w-full bg-white/50 dark:bg-slate-900/50 border border-slate-300 dark:border-slate-700 rounded-lg px-4 py-3 text-sm outline-none focus:border-cyan-500">
-          <textarea name="message" placeholder="Your message..." required rows="4" class="w-full bg-white/50 dark:bg-slate-900/50 border border-slate-300 dark:border-slate-700 rounded-lg px-4 py-3 text-sm outline-none focus:border-cyan-500"></textarea>
-          <button type="submit" class="w-full py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-xs font-bold uppercase tracking-widest rounded-lg hover:bg-cyan-600 dark:hover:bg-cyan-400 transition-colors">Send Inquiry</button>
-        </form>
-
         <div class="pt-8">
-          <a href="https://www.linkedin.com/in/abhay-jain-10" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-slate-900 text-white dark:bg-white dark:text-slate-900 text-xs font-bold uppercase tracking-widest hover:scale-105 transition-transform duration-300 shadow-xl">
+          <a href="https://www.linkedin.com/in/abhay-jain-10" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-cyan-600 text-white text-xs font-bold uppercase tracking-widest hover:scale-105 transition-transform duration-300 shadow-xl">
             Connect on LinkedIn
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
           </a>
@@ -97,6 +202,7 @@
 
   </main>
 
+  <!-- Footer -->
   <footer class="border-t border-slate-300/60 dark:border-white/10 bg-white/30 dark:bg-slate-950/50 backdrop-blur-md py-12 reveal">
     <div class="max-w-6xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
       <div class="flex items-center justify-center md:justify-start gap-8">
@@ -144,23 +250,24 @@
     });
   </script>
 
-  <!-- SUPABASE JAVASCRIPT -->
+  <!-- SUPABASE JAVASCRIPT WITH ERROR LOGGING -->
   <script>
     const SUPABASE_URL = 'https://hzberqqphfalpfftptcm.supabase.co';
-    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh6YmVycXFwaGZhbHBmZnRwdGNtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI4MDc3NjYsImV4cCI6MjA5ODM4Mzc2Nn0.rMEa3QY97y5leS-FW-KJUINL-NZWlMUsmuKS68pUzyQ';
+    const SUPABASE_ANON_KEY = 'PASTE_YOUR_LONG_KEY_HERE';
 
-    // Handle Inquiry Form (if it exists on page)
+    // Handle Inquiry Form
     const inquiryForm = document.getElementById('inquiry-form');
     if (inquiryForm) {
       inquiryForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const formData = new FormData(inquiryForm);
         const data = {
-          first_name: formData.get('first_name') || 'N/A',
-          last_name: formData.get('last_name') || 'N/A',
+          first_name: formData.get('first_name'),
+          last_name: formData.get('last_name'),
           email: formData.get('email'),
-          message: formData.get('message') || 'N/A',
-          subject: 'Website Inquiry'
+          phone: formData.get('phone') || null,
+          subject: formData.get('subject'),
+          message: formData.get('message')
         };
 
         try {
@@ -174,9 +281,19 @@
             },
             body: JSON.stringify(data)
           });
-          if (response.ok) { alert('Message sent successfully!'); inquiryForm.reset(); } 
-          else { alert('Error sending message. Please try again.'); }
-        } catch (error) { console.error('Error:', error); }
+          
+          if (response.ok) { 
+            alert('Message sent successfully!'); 
+            inquiryForm.reset(); 
+          } else { 
+            const errorData = await response.json();
+            alert('Database Error: ' + (errorData.message || 'Check console for details.'));
+            console.error('Supabase Error Details:', errorData);
+          }
+        } catch (error) { 
+          alert('Network Error. Could not reach the database.');
+          console.error('Fetch Error:', error); 
+        }
       });
     }
 
@@ -199,9 +316,19 @@
             },
             body: JSON.stringify(data)
           });
-          if (response.ok) { alert('Subscribed successfully!'); form.reset(); } 
-          else { alert('You are already subscribed or an error occurred.'); }
-        } catch (error) { console.error('Error:', error); }
+          
+          if (response.ok) { 
+            alert('Subscribed successfully!'); 
+            form.reset(); 
+          } else { 
+            const errorData = await response.json();
+            alert('Database Error: ' + (errorData.message || 'You might already be subscribed.'));
+            console.error('Supabase Error Details:', errorData);
+          }
+        } catch (error) { 
+          alert('Network Error. Could not reach the database.');
+          console.error('Fetch Error:', error); 
+        }
       });
     });
   </script>
