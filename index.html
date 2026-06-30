@@ -4,47 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abhay Jain — Home</title>
+  
+  <!-- Production CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = { darkMode: 'class', theme: { extend: {}, } }
+    tailwind.config = { darkMode: 'class', theme: { extend: {} } }
   </script>
+  
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Forum&family=Inter:wght@300;400;500;600&display=swap');
     body { font-family: 'Inter', sans-serif; }
     .font-serif { font-family: 'Forum', serif; }
-    @keyframes gradient-shift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
-    .animate-text-gradient { background-size: 200% auto; animation: gradient-shift 6s linear infinite; }
     @keyframes breathe { 0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.5; } 50% { transform: scale(1.1) translate(2%, 2%); opacity: 0.8; } }
     .animate-breathe { animation: breathe 12s ease-in-out infinite; }
     .reveal { opacity: 0; transform: translateY(40px) scale(0.98); transition: all 1.2s cubic-bezier(0.25, 1.3, 0.5, 1); }
     .reveal.active { opacity: 1; transform: translateY(0) scale(1); }
-    .delay-75 { transition-delay: 75ms; } .delay-100 { transition-delay: 100ms; } .delay-150 { transition-delay: 150ms; } .delay-200 { transition-delay: 200ms; }
-    .mask-edges { -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%); mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%); }
-    input:-webkit-autofill, textarea:-webkit-autofill { -webkit-text-fill-color: inherit; transition: background-color 5000s ease-in-out 0s; }
   </style>
-  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
 </head>
 <body class="antialiased bg-[#FAFAFA] text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-700 relative min-h-screen">
 
+  <!-- Background Glow -->
   <div class="fixed inset-0 z-[-1] overflow-hidden bg-[#FAFAFA] dark:bg-slate-950 transition-colors duration-700">
-    <div class="absolute top-[-10%] left-[-10%] w-[80%] lg:w-[60%] h-[60%] rounded-full bg-violet-300/50 dark:bg-purple-900/50 blur-[90px] lg:blur-[100px] animate-breathe transition-colors duration-700"></div>
-    <div class="absolute bottom-[-10%] right-[-10%] w-[80%] lg:w-[60%] h-[60%] rounded-full bg-sky-300/50 dark:bg-violet-900/50 blur-[90px] lg:blur-[100px] animate-breathe transition-colors duration-700" style="animation-delay: -6s;"></div>
-    <div class="absolute top-[20%] right-[20%] w-[40%] h-[40%] rounded-full bg-indigo-300/40 dark:bg-fuchsia-900/30 blur-[90px] animate-breathe transition-colors duration-700" style="animation-delay: -3s;"></div>
+    <div class="absolute top-[-10%] left-[-10%] w-[80%] lg:w-[60%] h-[60%] rounded-full bg-violet-300/50 dark:bg-purple-900/50 blur-[90px] lg:blur-[100px] animate-breathe"></div>
+    <div class="absolute bottom-[-10%] right-[-10%] w-[80%] lg:w-[60%] h-[60%] rounded-full bg-sky-300/50 dark:bg-violet-900/50 blur-[90px] lg:blur-[100px] animate-breathe" style="animation-delay: -6s;"></div>
   </div>
 
-  <header class="sticky top-0 z-50 border-b border-white/40 dark:border-white/10 bg-white/50 dark:bg-slate-900/30 backdrop-blur-xl shadow-sm dark:shadow-[0_4px_30px_rgba(0,0,0,0.3)] transition-all duration-500">
-    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 md:px-6 py-4 md:py-5">
-      <a href="index.html" class="font-serif text-2xl md:text-3xl tracking-wide text-slate-900 dark:text-white hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors duration-300">Abhay Jain</a>
+  <!-- FIXED MOBILE HEADER -->
+  <header class="sticky top-0 z-50 border-b border-white/40 dark:border-white/10 bg-white/50 dark:bg-slate-900/30 backdrop-blur-xl transition-all duration-500">
+    <div class="mx-auto flex flex-col md:flex-row max-w-6xl items-center justify-between px-4 md:px-6 py-4 md:py-5 gap-3 md:gap-0">
+      <a href="index.html" class="font-serif text-2xl md:text-3xl tracking-wide text-slate-900 dark:text-white shrink-0">Abhay Jain</a>
       
-      <div class="flex items-center gap-6 lg:gap-8">
-        <nav class="flex items-center gap-4 lg:gap-8 text-[10px] md:text-[11px] font-semibold tracking-[0.15em] lg:tracking-[0.2em] uppercase text-slate-500 dark:text-slate-300">
-          <a href="index.html" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors duration-300">Home</a>
-          <a href="about.html" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors duration-300">About Me</a>
-          <a href="index.html#track-record" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors duration-300">Track Record</a>
-          <a href="#contact" class="text-slate-900 dark:text-white hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors duration-300">Contact</a>
+      <div class="flex items-center gap-4 md:gap-8">
+        <nav class="flex flex-wrap items-center justify-center gap-4 md:gap-8 text-[10px] md:text-xs font-semibold tracking-[0.1em] md:tracking-[0.2em] uppercase text-slate-500 dark:text-slate-300">
+          <a href="index.html" class="hover:text-cyan-600 dark:hover:text-cyan-400">Home</a>
+          <a href="about.html" class="hover:text-cyan-600 dark:hover:text-cyan-400">About Me</a>
+          <a href="index.html#track-record" class="hover:text-cyan-600 dark:hover:text-cyan-400">Track Record</a>
+          <a href="index.html#contact" class="hover:text-cyan-600 dark:hover:text-cyan-400">Contact</a>
         </nav>
         
-        <button id="theme-toggle" class="p-2 rounded-full bg-white/60 dark:bg-white/10 text-slate-600 dark:text-slate-300 hover:bg-white dark:hover:bg-white/20 shadow-sm dark:shadow-none transition-all duration-300">
+        <button id="theme-toggle" class="p-2 rounded-full bg-white/60 dark:bg-white/10 text-slate-600 dark:text-slate-300 hover:bg-white dark:hover:bg-white/20 transition-all duration-300">
           <svg id="theme-toggle-light-icon" class="w-4 h-4 hidden dark:block" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg>
           <svg id="theme-toggle-dark-icon" class="w-4 h-4 block dark:hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
         </button>
@@ -53,188 +51,76 @@
   </header>
 
   <main class="mx-auto max-w-6xl px-4 md:px-6 py-12 lg:py-24 space-y-24 lg:space-y-32">
+    
+    <!-- Hero Section -->
+    <section class="flex flex-col items-center justify-center text-center space-y-8 reveal active">
+      <div class="relative group cursor-pointer">
+        <div class="absolute inset-0 bg-white/50 dark:bg-cyan-500/30 rounded-lg blur-2xl transition-all duration-700"></div>
+        <img src="Abhay_Jain_profile_pic.jpg" alt="Abhay Jain" class="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-72 lg:h-72 object-cover rounded-lg border border-white/80 dark:border-white/20 shadow-lg">
+      </div>
+      <h1 class="font-serif text-5xl lg:text-7xl tracking-wide text-slate-900 dark:text-white">Abhay Jain</h1>
+      <p class="text-lg md:text-2xl text-slate-600 dark:text-slate-300 font-light max-w-3xl leading-relaxed">
+        Business Division Leader at Renesas Electronics. Bridging technology, localized product strategy, and cross-functional operations.
+      </p>
+    </section>
 
-    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center pt-8">
-      <div class="lg:col-span-8 space-y-6 lg:space-y-8 order-2 lg:order-1 text-center lg:text-left">
-        <h1 class="font-serif text-5xl sm:text-6xl lg:text-8xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-slate-600 to-slate-800 dark:from-white dark:via-cyan-200 dark:to-indigo-400 animate-text-gradient leading-tight pb-2 transition-all duration-700 reveal active">
-          Abhay Jain
-        </h1>
-        <p class="text-xl sm:text-2xl lg:text-3xl font-light text-slate-600 dark:text-slate-200 max-w-3xl leading-snug mx-auto lg:mx-0 transition-colors duration-700 reveal active delay-100">
-          Business Division Leader at Renesas Electronics. Bridging technology, localized product strategy, and cross-functional operations.
+    <!-- Inbound Section (Mobile background fix applied) -->
+    <section id="contact" class="relative overflow-hidden rounded-3xl reveal">
+      <div class="absolute inset-0 bg-[url('kalam_bg.jpg')] bg-cover bg-top md:bg-center opacity-20 dark:opacity-40 grayscale mix-blend-overlay"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-white/80 to-white/95 dark:from-slate-950/80 dark:to-slate-950/95"></div>
+      
+      <div class="relative px-6 py-20 md:py-32 text-center max-w-4xl mx-auto space-y-8">
+        <h2 class="font-serif text-4xl lg:text-6xl tracking-wide text-slate-900 dark:text-white">Inbound</h2>
+        <p class="text-lg md:text-2xl text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
+          Open to precise conversations regarding advisory positions, semiconductor ecosystem strategies, or institutional alignment.
         </p>
-      </div>
-      <div class="lg:col-span-4 flex justify-center lg:justify-end order-1 lg:order-2">
-        <div class="relative group cursor-pointer reveal active delay-200">
-          <div class="absolute inset-0 bg-white/50 dark:bg-cyan-500/30 rounded-lg blur-2xl group-hover:bg-white/80 dark:group-hover:bg-indigo-400/50 transition-all duration-700"></div>
-          <img src="Abhay_Jain_profile_pic.jpg" alt="Abhay Jain" class="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-72 lg:h-72 object-cover shadow-[0_20px_40px_rgba(0,0,0,0.08)] dark:shadow-[0_0_40px_rgba(0,0,0,0.5)] border border-white/80 dark:border-white/20 rounded-lg group-hover:-translate-y-3 group-hover:scale-[1.02] transition-all duration-700 ease-out">
-        </div>
-      </div>
-    </section>
-
-    <section id="focus" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 pt-16 border-t border-slate-300/60 dark:border-white/10 scroll-mt-12 transition-colors duration-700">
-      <div class="lg:col-span-4">
-        <h2 class="font-serif text-3xl lg:text-4xl tracking-wide text-slate-900 dark:text-white transition-colors duration-700 reveal">Current Focus</h2>
-      </div>
-      <div class="lg:col-span-8">
-        <ul class="space-y-4 text-lg lg:text-xl text-slate-600 dark:text-slate-300 font-light leading-relaxed transition-colors duration-700">
-          <li class="relative flex items-start gap-4 p-5 lg:p-6 rounded-2xl border border-transparent hover:bg-white/80 dark:hover:bg-slate-800/40 hover:backdrop-blur-md hover:border-slate-300 dark:hover:border-slate-700 hover:shadow-sm dark:hover:shadow-[0_0_30px_rgba(34,211,238,0.08)] transition-all duration-500 hover:-translate-y-1 group reveal delay-75">
-            <span class="text-cyan-600 dark:text-cyan-400 font-bold group-hover:text-cyan-500 dark:group-hover:text-cyan-300 transition-colors mt-1">—</span>
-            <span class="block group-hover:text-slate-900 dark:group-hover:text-white transition-colors duration-500">Leading Renesas’ India-for-India business unit, managing power management, sensing, and embedded analog semiconductor portfolios.</span>
-          </li>
-          <li class="relative flex items-start gap-4 p-5 lg:p-6 rounded-2xl border border-transparent hover:bg-white/80 dark:hover:bg-slate-800/40 hover:backdrop-blur-md hover:border-slate-300 dark:hover:border-slate-700 hover:shadow-sm dark:hover:shadow-[0_0_30px_rgba(34,211,238,0.08)] transition-all duration-500 hover:-translate-y-1 group reveal delay-150">
-            <span class="text-cyan-600 dark:text-cyan-400 font-bold group-hover:text-cyan-500 dark:group-hover:text-cyan-300 transition-colors mt-1">—</span>
-            <span class="block group-hover:text-slate-900 dark:group-hover:text-white transition-colors duration-500">Shaping localized product roadmaps and accelerating market adoption across automotive, industrial, and energy segments.</span>
-          </li>
-          <li class="relative flex items-start gap-4 p-5 lg:p-6 rounded-2xl border border-transparent hover:bg-white/80 dark:hover:bg-slate-800/40 hover:backdrop-blur-md hover:border-slate-300 dark:hover:border-slate-700 hover:shadow-sm dark:hover:shadow-[0_0_30px_rgba(34,211,238,0.08)] transition-all duration-500 hover:-translate-y-1 group reveal delay-200">
-            <span class="text-cyan-600 dark:text-cyan-400 font-bold group-hover:text-cyan-500 dark:group-hover:text-cyan-300 transition-colors mt-1">—</span>
-            <span class="block group-hover:text-slate-900 dark:group-hover:text-white transition-colors duration-500">Developing critical ecosystem partnerships to support sustainable scaling within India's rapidly evolving electronics hardware economy.</span>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Track Record -->
-    <section id="track-record" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 pt-16 scroll-mt-12 transition-colors duration-700">
-      <div class="lg:col-span-4">
-        <h2 class="font-serif text-3xl lg:text-4xl tracking-wide text-slate-900 dark:text-white transition-colors duration-700 reveal">Track Record</h2>
-      </div>
-      <div class="lg:col-span-8 space-y-16">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
-          
-          <div class="group p-6 lg:p-8 rounded-2xl bg-white/60 dark:bg-slate-900/40 backdrop-blur-md border border-slate-300 dark:border-slate-700 hover:bg-white/90 dark:hover:border-cyan-500/50 shadow-sm dark:shadow-none hover:shadow-md dark:hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal delay-75">
-            <div class="font-serif text-4xl lg:text-5xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-500 dark:from-white dark:to-slate-400 transition-transform duration-500 group-hover:scale-105 origin-left group-hover:animate-text-gradient group-hover:from-slate-900 group-hover:to-cyan-600 dark:group-hover:from-white dark:group-hover:to-cyan-200">$3B – $30B</div>
-            <div class="text-[10px] uppercase tracking-[0.2em] text-cyan-600 dark:text-cyan-400 font-bold mt-4 transition-colors">Portfolio Management</div>
-            <p class="text-base lg:text-lg text-slate-600 dark:text-slate-300 font-light pt-3 transition-colors duration-700">Executed go-to-market strategies, sales playbooks, and KPI architectures across global business structures.</p>
+        
+        <!-- Inquiry Form for Database -->
+        <form id="inquiry-form" class="mt-8 space-y-4 max-w-md mx-auto text-left">
+          <div class="grid grid-cols-2 gap-4">
+            <input type="text" name="first_name" placeholder="First Name" required class="w-full bg-white/50 dark:bg-slate-900/50 border border-slate-300 dark:border-slate-700 rounded-lg px-4 py-3 text-sm outline-none focus:border-cyan-500">
+            <input type="text" name="last_name" placeholder="Last Name" required class="w-full bg-white/50 dark:bg-slate-900/50 border border-slate-300 dark:border-slate-700 rounded-lg px-4 py-3 text-sm outline-none focus:border-cyan-500">
           </div>
-          
-          <div class="group p-6 lg:p-8 rounded-2xl bg-white/60 dark:bg-slate-900/40 backdrop-blur-md border border-slate-300 dark:border-slate-700 hover:bg-white/90 dark:hover:border-cyan-500/50 shadow-sm dark:shadow-none hover:shadow-md dark:hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal delay-150">
-            <div class="font-serif text-4xl lg:text-5xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-500 dark:from-white dark:to-slate-400 transition-transform duration-500 group-hover:scale-105 origin-left group-hover:animate-text-gradient group-hover:from-slate-900 group-hover:to-cyan-600 dark:group-hover:from-white dark:group-hover:to-cyan-200">+15% to 20%</div>
-            <div class="text-[10px] uppercase tracking-[0.2em] text-cyan-600 dark:text-cyan-400 font-bold mt-4 transition-colors">Operational Efficiency</div>
-            <p class="text-base lg:text-lg text-slate-600 dark:text-slate-300 font-light pt-3 transition-colors duration-700">Built central program networks governing resource deployment, outsourcing, and analytics automation.</p>
-          </div>
-          
-          <div class="group p-6 lg:p-8 rounded-2xl bg-white/60 dark:bg-slate-900/40 backdrop-blur-md border border-slate-300 dark:border-slate-700 hover:bg-white/90 dark:hover:border-cyan-500/50 shadow-sm dark:shadow-none hover:shadow-md dark:hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal delay-75">
-            <div class="font-serif text-4xl lg:text-5xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-500 dark:from-white dark:to-slate-400 transition-transform duration-500 group-hover:scale-105 origin-left group-hover:animate-text-gradient group-hover:from-slate-900 group-hover:to-cyan-600 dark:group-hover:from-white dark:group-hover:to-cyan-200">~10% Growth</div>
-            <div class="text-[10px] uppercase tracking-[0.2em] text-cyan-600 dark:text-cyan-400 font-bold mt-4 transition-colors">Org Transformation</div>
-            <p class="text-base lg:text-lg text-slate-600 dark:text-slate-300 font-light pt-3 transition-colors duration-700">Led post-merger integration strategies and commercial growth pilots during tenure at McKinsey & Company.</p>
-          </div>
-          
-          <div class="group p-6 lg:p-8 rounded-2xl bg-white/60 dark:bg-slate-900/40 backdrop-blur-md border border-slate-300 dark:border-slate-700 hover:bg-white/90 dark:hover:border-cyan-500/50 shadow-sm dark:shadow-none hover:shadow-md dark:hover:shadow-[0_0_30px_rgba(34,211,238,0.15)] transition-all duration-500 hover:-translate-y-2 cursor-default reveal delay-150">
-            <div class="font-serif text-4xl lg:text-5xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-500 dark:from-white dark:to-slate-400 transition-transform duration-500 group-hover:scale-105 origin-left group-hover:animate-text-gradient group-hover:from-slate-900 group-hover:to-cyan-600 dark:group-hover:from-white dark:group-hover:to-cyan-200">Patented</div>
-            <div class="text-[10px] uppercase tracking-[0.2em] text-cyan-600 dark:text-cyan-400 font-bold mt-4 transition-colors">Deep-Tech Hardware</div>
-            <p class="text-base lg:text-lg text-slate-600 dark:text-slate-300 font-light pt-3 transition-colors duration-700">Co-authored emergency utility safety mechanics and published global industrial research at Mitsubishi Heavy Industries.</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Standard HTML Inquiry Form (Ready for Backend Integration) -->
-    <section id="inquiry" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 pt-16 scroll-mt-12 transition-colors duration-700">
-      <div class="lg:col-span-4">
-        <h2 class="font-serif text-3xl lg:text-4xl tracking-wide text-slate-900 dark:text-white transition-colors duration-700 reveal">Direct Inquiry</h2>
-        <p class="mt-4 text-lg lg:text-xl text-slate-600 dark:text-slate-300 font-light leading-relaxed reveal delay-75">
-          Have a new idea, want to discuss an opportunity, or share thoughts? Submit a request below.
-        </p>
-      </div>
-      <div class="lg:col-span-8">
-        <!-- Changed to standard form POST action for backend processing -->
-        <form action="/api/submit-inquiry" method="POST" class="space-y-6 p-6 lg:p-8 rounded-2xl bg-white/60 dark:bg-slate-900/40 backdrop-blur-md border border-slate-300 dark:border-slate-700 shadow-sm dark:shadow-none transition-all duration-500 reveal delay-150">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="space-y-2">
-              <label for="first_name" class="text-xs font-bold tracking-widest uppercase text-slate-500 dark:text-slate-400">First Name</label>
-              <input type="text" id="first_name" name="first_name" required class="w-full bg-transparent border-b border-slate-300 dark:border-slate-600 focus:border-cyan-500 dark:focus:border-cyan-400 text-slate-900 dark:text-white py-2 outline-none transition-colors">
-            </div>
-            <div class="space-y-2">
-              <label for="last_name" class="text-xs font-bold tracking-widest uppercase text-slate-500 dark:text-slate-400">Last Name</label>
-              <input type="text" id="last_name" name="last_name" required class="w-full bg-transparent border-b border-slate-300 dark:border-slate-600 focus:border-cyan-500 dark:focus:border-cyan-400 text-slate-900 dark:text-white py-2 outline-none transition-colors">
-            </div>
-            <div class="space-y-2">
-              <label for="email" class="text-xs font-bold tracking-widest uppercase text-slate-500 dark:text-slate-400">Your Email</label>
-              <input type="email" id="email" name="email" required class="w-full bg-transparent border-b border-slate-300 dark:border-slate-600 focus:border-cyan-500 dark:focus:border-cyan-400 text-slate-900 dark:text-white py-2 outline-none transition-colors">
-            </div>
-            <div class="space-y-2">
-              <label for="phone" class="text-xs font-bold tracking-widest uppercase text-slate-500 dark:text-slate-400">Your Phone</label>
-              <input type="tel" id="phone" name="phone" class="w-full bg-transparent border-b border-slate-300 dark:border-slate-600 focus:border-cyan-500 dark:focus:border-cyan-400 text-slate-900 dark:text-white py-2 outline-none transition-colors">
-            </div>
-          </div>
-          <div class="space-y-2">
-            <label for="subject" class="text-xs font-bold tracking-widest uppercase text-slate-500 dark:text-slate-400">Email Subject</label>
-            <input type="text" id="subject" name="subject" required class="w-full bg-transparent border-b border-slate-300 dark:border-slate-600 focus:border-cyan-500 dark:focus:border-cyan-400 text-slate-900 dark:text-white py-2 outline-none transition-colors">
-          </div>
-          <div class="space-y-2">
-            <label for="message" class="text-xs font-bold tracking-widest uppercase text-slate-500 dark:text-slate-400">Your Message</label>
-            <textarea id="message" name="message" rows="4" required class="w-full bg-transparent border-b border-slate-300 dark:border-slate-600 focus:border-cyan-500 dark:focus:border-cyan-400 text-slate-900 dark:text-white py-2 outline-none transition-colors resize-none"></textarea>
-          </div>
-          <div class="flex items-center gap-3 pt-2 pb-4">
-            <input type="checkbox" id="consent" required class="w-4 h-4 text-cyan-600 bg-transparent border-slate-300 rounded focus:ring-cyan-500">
-            <label for="consent" class="text-[10px] md:text-xs text-slate-500 dark:text-slate-400">By checking this box, you are granting permission to email you.</label>
-          </div>
-          <div>
-            <button type="submit" class="inline-flex items-center justify-center px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-full hover:bg-cyan-600 dark:hover:bg-cyan-400 transition-colors duration-300 text-xs font-bold tracking-widest uppercase w-full sm:w-auto">
-              Send Message
-            </button>
-          </div>
+          <input type="email" name="email" placeholder="Email Address" required class="w-full bg-white/50 dark:bg-slate-900/50 border border-slate-300 dark:border-slate-700 rounded-lg px-4 py-3 text-sm outline-none focus:border-cyan-500">
+          <textarea name="message" placeholder="Your message..." required rows="4" class="w-full bg-white/50 dark:bg-slate-900/50 border border-slate-300 dark:border-slate-700 rounded-lg px-4 py-3 text-sm outline-none focus:border-cyan-500"></textarea>
+          <button type="submit" class="w-full py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-xs font-bold uppercase tracking-widest rounded-lg hover:bg-cyan-600 dark:hover:bg-cyan-400 transition-colors">Send Inquiry</button>
         </form>
+
+        <div class="pt-8">
+          <a href="https://www.linkedin.com/in/abhay-jain-10" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-slate-900 text-white dark:bg-white dark:text-slate-900 text-xs font-bold uppercase tracking-widest hover:scale-105 transition-transform duration-300 shadow-xl">
+            Connect on LinkedIn
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </a>
+        </div>
       </div>
     </section>
 
   </main>
 
-  <!-- Banner -->
-  <section id="contact" class="relative w-full py-24 md:py-32 scroll-mt-12 transition-colors duration-700 overflow-hidden mt-16">
-    <div class="absolute inset-0 z-0 mask-edges pointer-events-none reveal delay-75">
-      <img src="Abhay_Jain_banner_pic.jpg" class="w-full h-full object-cover object-[80%_center] opacity-60 dark:opacity-30 grayscale" alt="Context: Presenting technical frameworks alongside Dr. A.P.J. Abdul Kalam.">
-      <div class="absolute inset-0 bg-slate-300/40 mix-blend-color dark:bg-indigo-950/60 dark:mix-blend-multiply transition-colors duration-700"></div>
-    </div>
-    <div class="relative z-10 max-w-6xl mx-auto px-4 md:px-6 text-center space-y-8">
-      <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl tracking-wide text-slate-900 dark:text-white transition-colors duration-700 reveal">Inbound</h2>
-      <p class="text-lg md:text-xl font-medium text-slate-800 dark:text-slate-300 dark:font-light leading-relaxed max-w-2xl mx-auto transition-colors duration-700 reveal delay-100">
-        Open to precise conversations regarding advisory positions, semiconductor ecosystem strategies, or institutional alignment.
-      </p>
-      <div class="pt-8 flex justify-center reveal delay-200">
-        <a href="https://www.linkedin.com/in/abhay-jain-10" target="_blank" rel="noopener noreferrer" class="relative inline-flex items-center justify-center px-8 md:px-10 py-4 md:py-5 bg-slate-900 dark:bg-white/10 backdrop-blur-md rounded-full group overflow-hidden shadow-xl dark:shadow-none border border-transparent dark:border-white/10 hover:dark:border-cyan-400/50 transition-all duration-500 hover:-translate-y-1">
-          <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-cyan-600 to-indigo-600 opacity-0 dark:opacity-80 group-hover:opacity-100 transition-opacity duration-300"></span>
-          <span class="absolute bottom-0 right-0 block w-64 h-64 mb-32 mr-4 transition duration-500 origin-bottom-left transform rotate-45 translate-x-24 bg-white/20 dark:bg-cyan-400 opacity-20 dark:opacity-30 group-hover:rotate-90 ease"></span>
-          <span class="relative flex items-center gap-4 text-xs md:text-sm font-bold tracking-[0.2em] uppercase text-white">
-            Connect on LinkedIn
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transform transition-transform duration-300 group-hover:translate-x-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer with Subscription -->
-  <footer class="border-t border-slate-300/60 dark:border-white/10 bg-white/30 dark:bg-slate-950/50 backdrop-blur-md py-12 transition-colors duration-700 reveal">
+  <footer class="border-t border-slate-300/60 dark:border-white/10 bg-white/30 dark:bg-slate-950/50 backdrop-blur-md py-12 reveal">
     <div class="max-w-6xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
       <div class="flex items-center justify-center md:justify-start gap-8">
-        <a href="https://www.linkedin.com/in/abhay-jain-10" target="_blank" rel="noopener noreferrer" class="text-slate-500 dark:text-slate-400 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">
+        <a href="https://www.linkedin.com/in/abhay-jain-10" target="_blank" class="text-slate-500 hover:text-cyan-600 dark:text-slate-400 dark:hover:text-cyan-400">
           <span class="sr-only">LinkedIn</span>
-          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd" /></svg>
+          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd" /></svg>
         </a>
-        <a href="https://www.instagram.com/ayjain10/" target="_blank" rel="noopener noreferrer" class="text-slate-500 dark:text-slate-400 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">
+        <a href="https://www.instagram.com/ayjain10/" target="_blank" class="text-slate-500 hover:text-cyan-600 dark:text-slate-400 dark:hover:text-cyan-400">
           <span class="sr-only">Instagram</span>
-          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" /></svg>
+          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" /></svg>
         </a>
       </div>
       <div class="flex flex-col md:items-end text-center md:text-right space-y-3">
         <h4 class="text-xs font-bold tracking-widest uppercase text-slate-900 dark:text-white">Subscribe</h4>
-        <p class="text-xs text-slate-500 dark:text-slate-400">Sign up to stay up to date.</p>
-        <form class="flex w-full md:w-auto max-w-sm border border-slate-300 dark:border-slate-700 rounded-full overflow-hidden bg-white/50 dark:bg-slate-900/50">
-          <input type="email" placeholder="Enter your email" required class="w-full bg-transparent px-4 py-2 text-sm text-slate-900 dark:text-white outline-none">
-          <button type="submit" class="px-6 py-2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-xs font-bold uppercase tracking-wider hover:bg-cyan-600 dark:hover:bg-cyan-400 transition-colors duration-300">Submit</button>
+        <form id="subscribe-form" class="flex w-full md:w-auto max-w-sm border border-slate-300 dark:border-slate-700 rounded-full overflow-hidden bg-white/50 dark:bg-slate-900/50">
+          <input type="email" name="email" placeholder="Enter your email" required class="w-full bg-transparent px-4 py-2 text-sm text-slate-900 dark:text-white outline-none">
+          <button type="submit" class="px-6 py-2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-xs font-bold uppercase tracking-wider hover:bg-cyan-600 dark:hover:bg-cyan-400 transition-colors">Submit</button>
         </form>
       </div>
-    </div>
-    <div class="mt-12 text-center text-[10px] md:text-xs tracking-widest uppercase text-slate-400 dark:text-slate-500 transition-colors duration-700">
-      &copy; 2026 Abhay Jain. Executive Positioning.
     </div>
   </footer>
 
   <script>
+    // Theme Toggle Logic
     const themeToggleBtn = document.getElementById('theme-toggle');
     const darkIcon = document.getElementById('theme-toggle-dark-icon');
     const lightIcon = document.getElementById('theme-toggle-light-icon');
@@ -248,12 +134,75 @@
       }
     });
 
+    // Scroll Reveal Logic
     document.addEventListener("DOMContentLoaded", () => {
       const reveals = document.querySelectorAll(".reveal");
       const revealOnScroll = new IntersectionObserver((entries) => {
         entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add("active"); } else { entry.target.classList.remove("active"); } });
       }, { root: null, threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
       reveals.forEach(reveal => revealOnScroll.observe(reveal));
+    });
+  </script>
+
+  <!-- SUPABASE JAVASCRIPT -->
+  <script>
+    const SUPABASE_URL = 'https://hzberqqphfalpfftptcm.supabase.co';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh6YmVycXFwaGZhbHBmZnRwdGNtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI4MDc3NjYsImV4cCI6MjA5ODM4Mzc2Nn0.rMEa3QY97y5leS-FW-KJUINL-NZWlMUsmuKS68pUzyQ';
+
+    // Handle Inquiry Form (if it exists on page)
+    const inquiryForm = document.getElementById('inquiry-form');
+    if (inquiryForm) {
+      inquiryForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const formData = new FormData(inquiryForm);
+        const data = {
+          first_name: formData.get('first_name') || 'N/A',
+          last_name: formData.get('last_name') || 'N/A',
+          email: formData.get('email'),
+          message: formData.get('message') || 'N/A',
+          subject: 'Website Inquiry'
+        };
+
+        try {
+          const response = await fetch(`${SUPABASE_URL}/rest/v1/inquiries`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'apikey': SUPABASE_ANON_KEY,
+              'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+              'Prefer': 'return=minimal'
+            },
+            body: JSON.stringify(data)
+          });
+          if (response.ok) { alert('Message sent successfully!'); inquiryForm.reset(); } 
+          else { alert('Error sending message. Please try again.'); }
+        } catch (error) { console.error('Error:', error); }
+      });
+    }
+
+    // Handle Subscribe Form
+    const subscribeForms = document.querySelectorAll('#subscribe-form');
+    subscribeForms.forEach(form => {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const data = { email: formData.get('email') };
+
+        try {
+          const response = await fetch(`${SUPABASE_URL}/rest/v1/subscriptions`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'apikey': SUPABASE_ANON_KEY,
+              'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+              'Prefer': 'return=minimal'
+            },
+            body: JSON.stringify(data)
+          });
+          if (response.ok) { alert('Subscribed successfully!'); form.reset(); } 
+          else { alert('You are already subscribed or an error occurred.'); }
+        } catch (error) { console.error('Error:', error); }
+      });
     });
   </script>
 </body>
