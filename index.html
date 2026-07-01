@@ -22,7 +22,15 @@
     .reveal.active { opacity: 1; transform: translateY(0) scale(1); }
     .delay-75 { transition-delay: 75ms; } .delay-100 { transition-delay: 100ms; } .delay-150 { transition-delay: 150ms; } .delay-200 { transition-delay: 200ms; }
     .mask-edges { -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%); mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%); }
-    input:-webkit-autofill, textarea:-webkit-autofill { -webkit-text-fill-color: inherit; transition: background-color 5000s ease-in-out 0s; }
+    
+    /* Forces autofill text to match current theme colors instead of defaulting to black */
+    input:-webkit-autofill, textarea:-webkit-autofill { 
+      -webkit-text-fill-color: var(--tw-text-opacity) !important; 
+      transition: background-color 5000s ease-in-out 0s; 
+    }
+    html.dark input:-webkit-autofill, html.dark textarea:-webkit-autofill {
+      -webkit-text-fill-color: #f8fafc !important; /* Force white text in dark mode autofill */
+    }
   </style>
   <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
 </head>
@@ -35,11 +43,11 @@
   </div>
 
   <header class="sticky top-0 z-50 border-b border-white/40 dark:border-white/10 bg-white/50 dark:bg-slate-900/30 backdrop-blur-xl shadow-sm dark:shadow-[0_4px_30px_rgba(0,0,0,0.3)] transition-all duration-500">
-    <div class="mx-auto flex flex-col md:flex-row max-w-6xl items-center justify-between px-4 md:px-6 py-4 md:py-5 gap-3 md:gap-0">
-      <a href="index.html" class="font-serif text-2xl md:text-3xl tracking-wide text-slate-900 dark:text-white hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors duration-300 shrink-0">Abhay Jain</a>
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 md:px-6 py-4 md:py-5">
+      <a href="index.html" class="font-serif text-2xl md:text-3xl tracking-wide text-slate-900 dark:text-white hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors duration-300">Abhay Jain</a>
 
-      <div class="flex items-center gap-4 md:gap-8">
-        <nav class="flex flex-wrap items-center justify-center gap-4 lg:gap-8 text-[10px] md:text-[11px] font-semibold tracking-[0.15em] lg:tracking-[0.2em] uppercase text-slate-500 dark:text-slate-300">
+      <div class="flex items-center gap-6 lg:gap-8">
+        <nav class="flex items-center gap-4 lg:gap-8 text-[10px] md:text-[11px] font-semibold tracking-[0.15em] lg:tracking-[0.2em] uppercase text-slate-500 dark:text-slate-300">
           <a href="index.html" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors duration-300">Home</a>
           <a href="about.html" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors duration-300">About Me</a>
           <a href="index.html#track-record" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors duration-300">Track Record</a>
@@ -95,7 +103,6 @@
       </div>
     </section>
 
-    <!-- Track Record -->
     <section id="track-record" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 pt-16 scroll-mt-12 transition-colors duration-700">
       <div class="lg:col-span-4">
         <h2 class="font-serif text-3xl lg:text-4xl tracking-wide text-slate-900 dark:text-white transition-colors duration-700 reveal">Track Record</h2>
@@ -131,7 +138,6 @@
       </div>
     </section>
 
-    <!-- Standard HTML Inquiry Form (Ready for Backend Integration) -->
     <section id="inquiry" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 pt-16 scroll-mt-12 transition-colors duration-700">
       <div class="lg:col-span-4">
         <h2 class="font-serif text-3xl lg:text-4xl tracking-wide text-slate-900 dark:text-white transition-colors duration-700 reveal">Direct Inquiry</h2>
@@ -140,32 +146,32 @@
         </p>
       </div>
       <div class="lg:col-span-8">
-        <form id="inquiry-form" class="space-y-6 p-6 lg:p-8 rounded-2xl bg-white/60 dark:bg-slate-900/40 backdrop-blur-md border border-slate-300 dark:border-slate-700 shadow-sm dark:shadow-none transition-all duration-500 reveal delay-150">
+        <form id="inquiry-form" class="space-y-6 p-6 lg:p-8 rounded-2xl bg-white/60 dark:bg-slate-900/40 backdrop-blur-md border border-slate-300 dark:border-slate-700 shadow-sm dark:shadow-none transition-all duration-500 reveal delay-150 text-slate-900 dark:text-white">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="space-y-2">
               <label for="first_name" class="text-xs font-bold tracking-widest uppercase text-slate-500 dark:text-slate-400">First Name</label>
-              <input type="text" id="first_name" name="first_name" required class="w-full bg-transparent border-b border-slate-300 dark:border-slate-600 focus:border-cyan-500 dark:focus:border-cyan-400 text-slate-900 dark:text-white py-2 outline-none transition-colors">
+              <input type="text" id="first_name" name="first_name" pattern="^[a-zA-Z\s\-]+$" minlength="2" maxlength="50" required class="w-full bg-transparent border-b border-slate-300 dark:border-slate-600 focus:border-cyan-500 dark:focus:border-cyan-400 text-slate-900 dark:text-white py-2 outline-none transition-colors placeholder-slate-400 dark:placeholder-slate-500">
             </div>
             <div class="space-y-2">
               <label for="last_name" class="text-xs font-bold tracking-widest uppercase text-slate-500 dark:text-slate-400">Last Name</label>
-              <input type="text" id="last_name" name="last_name" required class="w-full bg-transparent border-b border-slate-300 dark:border-slate-600 focus:border-cyan-500 dark:focus:border-cyan-400 text-slate-900 dark:text-white py-2 outline-none transition-colors">
+              <input type="text" id="last_name" name="last_name" pattern="^[a-zA-Z\s\-]+$" minlength="2" maxlength="50" required class="w-full bg-transparent border-b border-slate-300 dark:border-slate-600 focus:border-cyan-500 dark:focus:border-cyan-400 text-slate-900 dark:text-white py-2 outline-none transition-colors placeholder-slate-400 dark:placeholder-slate-500">
             </div>
             <div class="space-y-2">
               <label for="email" class="text-xs font-bold tracking-widest uppercase text-slate-500 dark:text-slate-400">Your Email</label>
-              <input type="email" id="email" name="email" required class="w-full bg-transparent border-b border-slate-300 dark:border-slate-600 focus:border-cyan-500 dark:focus:border-cyan-400 text-slate-900 dark:text-white py-2 outline-none transition-colors">
+              <input type="email" id="email" name="email" required class="w-full bg-transparent border-b border-slate-300 dark:border-slate-600 focus:border-cyan-500 dark:focus:border-cyan-400 text-slate-900 dark:text-white py-2 outline-none transition-colors placeholder-slate-400 dark:placeholder-slate-500">
             </div>
             <div class="space-y-2">
               <label for="phone" class="text-xs font-bold tracking-widest uppercase text-slate-500 dark:text-slate-400">Your Phone</label>
-              <input type="tel" id="phone" name="phone" class="w-full bg-transparent border-b border-slate-300 dark:border-slate-600 focus:border-cyan-500 dark:focus:border-cyan-400 text-slate-900 dark:text-white py-2 outline-none transition-colors">
+              <input type="tel" id="phone" name="phone" pattern="^\+?[0-9\s\-\(\)]+$" minlength="7" maxlength="20" class="w-full bg-transparent border-b border-slate-300 dark:border-slate-600 focus:border-cyan-500 dark:focus:border-cyan-400 text-slate-900 dark:text-white py-2 outline-none transition-colors placeholder-slate-400 dark:placeholder-slate-500">
             </div>
           </div>
           <div class="space-y-2">
             <label for="subject" class="text-xs font-bold tracking-widest uppercase text-slate-500 dark:text-slate-400">Email Subject</label>
-            <input type="text" id="subject" name="subject" required class="w-full bg-transparent border-b border-slate-300 dark:border-slate-600 focus:border-cyan-500 dark:focus:border-cyan-400 text-slate-900 dark:text-white py-2 outline-none transition-colors">
+            <input type="text" id="subject" name="subject" minlength="3" maxlength="100" required class="w-full bg-transparent border-b border-slate-300 dark:border-slate-600 focus:border-cyan-500 dark:focus:border-cyan-400 text-slate-900 dark:text-white py-2 outline-none transition-colors placeholder-slate-400 dark:placeholder-slate-500">
           </div>
           <div class="space-y-2">
             <label for="message" class="text-xs font-bold tracking-widest uppercase text-slate-500 dark:text-slate-400">Your Message</label>
-            <textarea id="message" name="message" rows="4" required class="w-full bg-transparent border-b border-slate-300 dark:border-slate-600 focus:border-cyan-500 dark:focus:border-cyan-400 text-slate-900 dark:text-white py-2 outline-none transition-colors resize-none"></textarea>
+            <textarea id="message" name="message" rows="4" minlength="10" maxlength="1000" required class="w-full bg-transparent border-b border-slate-300 dark:border-slate-600 focus:border-cyan-500 dark:focus:border-cyan-400 text-slate-900 dark:text-white py-2 outline-none transition-colors resize-none placeholder-slate-400 dark:placeholder-slate-500"></textarea>
           </div>
           <div class="flex items-center gap-3 pt-2 pb-4">
             <input type="checkbox" id="consent" required class="w-4 h-4 text-cyan-600 bg-transparent border-slate-300 rounded focus:ring-cyan-500">
@@ -182,7 +188,6 @@
 
   </main>
 
-  <!-- Banner -->
   <section id="contact" class="relative w-full py-24 md:py-32 scroll-mt-12 transition-colors duration-700 overflow-hidden mt-16">
 
     <div class="absolute inset-0 z-0 mask-edges pointer-events-none reveal delay-75">
@@ -212,7 +217,6 @@
     </div>
   </section>
 
-  <!-- Footer with Subscription -->
   <footer class="border-t border-slate-300/60 dark:border-white/10 bg-white/30 dark:bg-slate-950/50 backdrop-blur-md py-12 transition-colors duration-700 reveal">
     <div class="max-w-6xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
@@ -230,8 +234,8 @@
       <div class="flex flex-col md:items-end text-center md:text-right space-y-3">
         <h4 class="text-xs font-bold tracking-widest uppercase text-slate-900 dark:text-white">Subscribe</h4>
         <p class="text-xs text-slate-500 dark:text-slate-400">Sign up to stay up to date.</p>
-        <form id="subscribe-form" class="flex w-full md:w-auto max-w-sm border border-slate-300 dark:border-slate-700 rounded-full overflow-hidden bg-white/50 dark:bg-slate-900/50">
-          <input type="email" name="email" placeholder="Enter your email" required class="w-full bg-transparent px-4 py-2 text-sm text-slate-900 dark:text-white outline-none">
+        <form id="subscribe-form" class="flex w-full md:w-auto max-w-sm border border-slate-300 dark:border-slate-700 rounded-full overflow-hidden bg-white/50 dark:bg-slate-900/50 text-slate-900 dark:text-white">
+          <input type="email" name="email" placeholder="Enter your email" required class="w-full bg-transparent px-4 py-2 text-sm text-slate-900 dark:text-white outline-none placeholder-slate-400 dark:placeholder-slate-500">
           <button type="submit" class="px-6 py-2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-xs font-bold uppercase tracking-wider hover:bg-cyan-600 dark:hover:bg-cyan-400 transition-colors duration-300">Submit</button>
         </form>
       </div>
@@ -292,10 +296,9 @@
     });
   </script>
 
-  <!-- SUPABASE JAVASCRIPT WITH ERROR LOGGING -->
   <script>
     const SUPABASE_URL = 'https://hzberqqphfalpfftptcm.supabase.co';
-    const SUPABASE_ANON_KEY = 'PASTE_YOUR_LONG_KEY_HERE'; // Safe as long as RLS is enabled!
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh6YmVycXFwaGZhbHBmZnRwdGNtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI4MDc3NjYsImV4cCI6MjA5ODM4Mzc2Nn0.rMEa3QY97y5leS-FW-KJUINL-NZWlMUsmuKS68pUzyQ';
 
     // Handle Inquiry Form
     const inquiryForm = document.getElementById('inquiry-form');
